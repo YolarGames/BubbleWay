@@ -15,7 +15,7 @@ namespace Utils
 
 		public static float GetRandomScreenWidthPosition()
 		{
-			float halfWidth = GetHalfScreenWidth();
+			float halfWidth = GetHalfScreenWidth() - 1f;
 			return Random.Range(-halfWidth, halfWidth);
 		}
 
