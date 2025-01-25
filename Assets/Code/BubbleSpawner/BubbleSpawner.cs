@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Utils;
 
 namespace BubbleSpawner
 {
@@ -6,6 +7,12 @@ namespace BubbleSpawner
 	{
 		[SerializeField] private Bubble _bubblePrefab;
 		private Bubble _spawnedBubble;
+
+		private void Start()
+		{
+			InvokeRepeating(nameof(SpawnBubble), 0, 5);
+			InvokeRepeating(nameof(ReleaseBubble), 3, 5);
+		}
 
 		private void OnEnable()
 		{
@@ -22,14 +29,19 @@ namespace BubbleSpawner
 		private void OnDrawGizmos()
 		{
 			Gizmos.color = Color.green;
-			Gizmos.DrawLine(new Vector3(-2.5f, transform.position.y), new Vector3(2.5f, transform.position.y));
+			Gizmos.DrawLine(
+				from: new Vector3(-StaticData.GetHalfScreenWidth(), transform.position.y),
+				to: new Vector3(StaticData.GetHalfScreenWidth(), transform.position.y));
 		}
 
 		private void ReleaseBubble() =>
 			_spawnedBubble.Release();
 
-		private void SpawnBubble() =>
-			Instantiate(_bubblePrefab, transform.position, Quaternion.identity, transform)
-				.StartGrow();
+		private void SpawnBubble()
+		{
+			var randomPosition = new Vector3(StaticData.GetRandomScreenWidthPosition(), transform.position.y, 0);
+			_spawnedBubble = Instantiate(_bubblePrefab, randomPosition, Quaternion.identity, transform);
+			_spawnedBubble.StartGrow();
+		}
 	}
 }
