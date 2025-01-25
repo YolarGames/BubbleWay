@@ -4,15 +4,14 @@ namespace Utils
 {
 	public static class StaticData
 	{
-		public const float MinSize = 1f;
+		private const float MinSize = 1f;
 		public const float MaxSize = 2.5f;
+		public const float Threshold = 0.25f;
 		private static Camera s_camera;
 		public static Camera Camera => s_camera ??= Camera.main;
 
-		public static float GetRandomSize()
-		{
-			return Random.Range(MinSize, MaxSize);
-		}
+		public static float GetRandomSize() =>
+			Random.Range(MinSize, MaxSize);
 
 		public static float GetRandomScreenWidthPosition()
 		{

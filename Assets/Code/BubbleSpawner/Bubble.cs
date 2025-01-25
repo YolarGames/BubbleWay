@@ -1,31 +1,49 @@
 ﻿using System.Collections;
+using PeopleSpawner;
+using PrimeTween;
 using UnityEngine;
 using Utils;
 
 namespace BubbleSpawner
 {
-	[RequireComponent(typeof(CircleCollider2D))]
+	[RequireComponent(typeof(CircleCollider2D), typeof(Rigidbody2D))]
 	public class Bubble : MonoBehaviour
 	{
-		[SerializeField] private float _growSpeed = 3f;
+		[SerializeField] private SpriteRenderer _spriteRenderer;
+		[SerializeField] private ParticleSystem _popParticles;
 		private const float StartSize = 0.5f;
-		private bool _isLaunched;
+		private CircleCollider2D _collider;
 		private Coroutine _growRoutine;
-		private float _flySpeed = 1f;
+		private Rigidbody2D _rigidbody;
 
-		private void Update()
+		private void Awake()
 		{
-			if (!_isLaunched)
+			_rigidbody = GetComponent<Rigidbody2D>();
+			_collider = GetComponent<CircleCollider2D>();
+		}
+
+		private void Start() =>
+			transform.localScale = Vector3.one * StartSize;
+
+		private void OnTriggerEnter2D(Collider2D other)
+		{
+			if (!other.TryGetComponent(out Meteor meteor))
 				return;
 
-			transform.position -= Vector3.down * (Time.deltaTime * _flySpeed);
+			if (!IsFittingSize(meteor))
+			{
+				Pop();
+				return;
+			}
+
+			_collider.enabled = false;
+			meteor.transform.SetParent(transform);
+			meteor.SetMeteorCout(_rigidbody.linearVelocity);
+			Tween.LocalPosition(meteor.transform, new Vector3(0, 0.2f), 0.1f, Ease.InBounce);
 		}
 
-		public void StartGrow()
-		{
-			transform.localScale = Vector3.one * StartSize;
+		public void StartGrow() =>
 			_growRoutine = StartCoroutine(GrowRoutine());
-		}
 
 		public void Release()
 		{
@@ -33,17 +51,34 @@ namespace BubbleSpawner
 			LaunchUp();
 		}
 
-		private void LaunchUp()
+		private void Pop()
 		{
-			_flySpeed /= transform.localScale.x;
-			_isLaunched = true;
+			_collider.enabled = false;
+			_spriteRenderer.enabled = false;
+			_popParticles.Play();
+			Invoke(nameof(Destroy), _popParticles.main.duration);
 		}
+
+		private void Destroy()
+		{
+			Destroy(gameObject);
+		}
+
+		private bool IsFittingSize(Meteor component)
+		{
+			float bubbleSize = transform.localScale.x;
+			float meteorSize = component.transform.localScale.x;
+			return bubbleSize < meteorSize + StaticData.Threshold && bubbleSize > meteorSize - StaticData.Threshold;
+		}
+
+		private void LaunchUp() =>
+			_rigidbody.AddForce(Vector2.up * 1 / transform.localScale.x, ForceMode2D.Impulse);
 
 		private IEnumerator GrowRoutine()
 		{
-			while (!_isLaunched)
+			while (true)
 			{
-				SetSize(Time.deltaTime / _growSpeed);
+				SetSize(Time.deltaTime);
 				yield return null;
 			}
 		}

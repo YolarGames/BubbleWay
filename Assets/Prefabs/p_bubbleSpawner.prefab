@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4099370343804774331}
   - component: {fileID: 621694151368592799}
-  - component: {fileID: 1627576532193492965}
   m_Layer: 0
   m_Name: p_bubbleSpawner
   m_TagString: Untagged
@@ -46,15 +45,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bubblePrefab: {fileID: 4416894141620264738, guid: d157bef30192087458379a786e9dbad6, type: 3}
---- !u!210 &1627576532193492965
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6992431372316936173}
-  m_Enabled: 1
-  m_SortingLayerID: 1224607603
-  m_SortingLayer: 3
-  m_SortingOrder: 1
-  m_SortAtRoot: 0

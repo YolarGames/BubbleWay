@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7297299044057899420}
   - component: {fileID: 5202088098503439237}
-  - component: {fileID: 5509149257338929222}
   m_Layer: 0
   m_Name: p_meteorSpawner
   m_TagString: Untagged
@@ -47,15 +46,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _meteorPrefab: {fileID: 5480554771898540626, guid: 54608759f52832849a2b21d928b5aecf, type: 3}
   <SpawnRate>k__BackingField: 3
---- !u!210 &5509149257338929222
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7786475823660865683}
-  m_Enabled: 1
-  m_SortingLayerID: 1224607603
-  m_SortingLayer: 3
-  m_SortingOrder: 0
-  m_SortAtRoot: 0
