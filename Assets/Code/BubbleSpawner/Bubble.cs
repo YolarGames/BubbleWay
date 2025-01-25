@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using PeopleSpawner;
 using PrimeTween;
+using StaticData;
 using UnityEngine;
-using Utils;
 using YolarUtils.Extension;
 
 namespace BubbleSpawner
@@ -24,7 +24,7 @@ namespace BubbleSpawner
 		}
 
 		private void Start() =>
-			transform.localScale = Vector3.one * StaticData.MinSize;
+			transform.localScale = Vector3.one * ObjectSizes.MinSize;
 
 		private void OnTriggerEnter2D(Collider2D other)
 		{
@@ -71,7 +71,7 @@ namespace BubbleSpawner
 		{
 			float bubbleSize = transform.localScale.x;
 			float meteorSize = component.transform.localScale.x;
-			return bubbleSize < meteorSize + StaticData.Threshold && bubbleSize > meteorSize - StaticData.Threshold;
+			return bubbleSize < meteorSize + ObjectSizes.Threshold && bubbleSize > meteorSize - ObjectSizes.Threshold;
 		}
 
 		private void LaunchUp() =>
@@ -89,7 +89,7 @@ namespace BubbleSpawner
 		private void SetSize(float size)
 		{
 			Vector3 newScale = transform.localScale + Vector3.one * size;
-			transform.localScale = Mathf.Min(newScale.x, StaticData.MaxSize) * Vector3.one;
+			transform.localScale = Mathf.Min(newScale.x, ObjectSizes.MaxSize) * Vector3.one;
 		}
 	}
 }

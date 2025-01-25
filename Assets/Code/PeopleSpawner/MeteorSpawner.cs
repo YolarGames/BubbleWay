@@ -1,4 +1,5 @@
 using System.Collections;
+using StaticData;
 using UnityEngine;
 using Utils;
 
@@ -32,9 +33,9 @@ namespace PeopleSpawner
 
 		private void CreateMeteor()
 		{
-			var randomPosition = new Vector3(StaticData.GetRandomScreenWidthPosition(), transform.position.y, 0);
+			var randomPosition = new Vector3(CameraUtils.GetRandomScreenWidthPosition(), transform.position.y, 0);
 			Meteor meteor = Instantiate(_meteorPrefab, randomPosition, Quaternion.identity, transform);
-			meteor.Launch(StaticData.GetRandomSize());
+			meteor.Launch(ObjectSizes.GetRandomSize());
 		}
 	}
 }

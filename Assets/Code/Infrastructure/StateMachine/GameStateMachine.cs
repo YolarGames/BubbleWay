@@ -1,9 +1,8 @@
-﻿using YolarUtils.StateMachine;
+﻿using UnityEngine.Scripting;
+using YolarUtils.StateMachine;
 
 namespace Infrastructure.StateMachine
 {
-	public class GameStateMachine : StateMachineBase
-	{
-		public GameStateMachine(IGameState[] states) { }
-	}
+	[Preserve]
+	public class GameStateMachine : StateMachineBase { }
 }

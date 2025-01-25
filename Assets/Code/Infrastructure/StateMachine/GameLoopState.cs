@@ -1,7 +1,11 @@
-﻿using YolarUtils.StateMachine;
+﻿using UnityEngine.Scripting;
+using YolarUtils.StateMachine;
 
 namespace Infrastructure.StateMachine
 {
-	[UnityEngine.Scripting.Preserve]
-	public class GameLoopState : IGameState { }
+	[Preserve]
+	public class GameLoopState : IEnterState
+	{
+		public void Enter() { }
+	}
 }

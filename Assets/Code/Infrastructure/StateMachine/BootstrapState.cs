@@ -1,10 +1,21 @@
-﻿using YolarUtils.StateMachine;
+﻿using StaticData;
+using UnityEngine.Scripting;
+using YolarUtils.StateMachine;
 
 namespace Infrastructure.StateMachine
 {
-	[UnityEngine.Scripting.Preserve]
 	public class BootstrapState : IEnterState
 	{
-		public void Enter() { }
+		private readonly IGameStateMachine _stateMachine;
+
+		[Preserve]
+		public BootstrapState(IGameStateMachine stateMachine) =>
+			_stateMachine = stateMachine;
+
+		public void Enter() =>
+			GoToMainMenu();
+
+		private void GoToMainMenu() =>
+			_stateMachine.Enter<LoadLevelState, string>(Scenes.MainMenu);
 	}
 }
