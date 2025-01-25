@@ -8,22 +8,16 @@ namespace BubbleSpawner
 		[SerializeField] private Bubble _bubblePrefab;
 		private Bubble _spawnedBubble;
 
-		private void Start()
-		{
-			InvokeRepeating(nameof(SpawnBubble), 0, 5);
-			InvokeRepeating(nameof(ReleaseBubble), 3, 5);
-		}
-
 		private void OnEnable()
 		{
-			BubbleEvents.OnBubbleStartBlow += SpawnBubble;
-			BubbleEvents.OnBubbleEndBlow += ReleaseBubble;
+			GameEvents.OnBubbleStartBlow += SpawnBubble;
+			GameEvents.OnBubbleEndBlow += ReleaseBubble;
 		}
 
 		private void OnDisable()
 		{
-			BubbleEvents.OnBubbleStartBlow -= SpawnBubble;
-			BubbleEvents.OnBubbleEndBlow -= ReleaseBubble;
+			GameEvents.OnBubbleStartBlow -= SpawnBubble;
+			GameEvents.OnBubbleEndBlow -= ReleaseBubble;
 		}
 
 		private void OnDrawGizmos()
@@ -37,10 +31,9 @@ namespace BubbleSpawner
 		private void ReleaseBubble() =>
 			_spawnedBubble.Release();
 
-		private void SpawnBubble()
+		private void SpawnBubble(Vector3 spawnPosition)
 		{
-			var randomPosition = new Vector3(StaticData.GetRandomScreenWidthPosition(), transform.position.y, 0);
-			_spawnedBubble = Instantiate(_bubblePrefab, randomPosition, Quaternion.identity, transform);
+			_spawnedBubble = Instantiate(_bubblePrefab, spawnPosition, Quaternion.identity, transform);
 			_spawnedBubble.StartGrow();
 		}
 	}

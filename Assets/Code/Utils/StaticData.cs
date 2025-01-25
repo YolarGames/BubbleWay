@@ -6,7 +6,6 @@ namespace Utils
 	{
 		public const float MinSize = 1f;
 		public const float MaxSize = 2.5f;
-		public const float DefaultSpeed = 1f;
 		private static Camera s_camera;
 		public static Camera Camera => s_camera ??= Camera.main;
 

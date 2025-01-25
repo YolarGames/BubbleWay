@@ -1,12 +1,13 @@
 ﻿using System;
+using UnityEngine;
 
-public static class BubbleEvents
+public static class GameEvents
 {
-	public static event Action OnBubbleStartBlow = delegate { };
 	public static event Action OnBubbleEndBlow = delegate { };
+	public static event Action<Vector3> OnBubbleStartBlow = delegate { };
 
-	public static void InvokeOnBubbleBlow() =>
-		OnBubbleStartBlow();
+	public static void InvokeOnBubbleBlow(Vector3 screenToWorldPoint) =>
+		OnBubbleStartBlow(screenToWorldPoint);
 
 	public static void InvokeOnBubbleEndBlow() =>
 		OnBubbleEndBlow();

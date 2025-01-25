@@ -7,6 +7,8 @@ namespace BubbleSpawner
 	[RequireComponent(typeof(CircleCollider2D))]
 	public class Bubble : MonoBehaviour
 	{
+		[SerializeField] private float _growSpeed = 3f;
+		private const float StartSize = 0.5f;
 		private bool _isLaunched;
 		private Coroutine _growRoutine;
 		private float _flySpeed = 1f;
@@ -21,7 +23,7 @@ namespace BubbleSpawner
 
 		public void StartGrow()
 		{
-			transform.localScale = Vector3.one * 0.2f;
+			transform.localScale = Vector3.one * StartSize;
 			_growRoutine = StartCoroutine(GrowRoutine());
 		}
 
@@ -41,7 +43,7 @@ namespace BubbleSpawner
 		{
 			while (!_isLaunched)
 			{
-				SetSize(Time.deltaTime / 3f);
+				SetSize(Time.deltaTime / _growSpeed);
 				yield return null;
 			}
 		}

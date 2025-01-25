@@ -8,7 +8,7 @@ namespace PeopleSpawner
 	public class MeteorSpawner : MonoBehaviour
 	{
 		[SerializeField] private Meteor _meteorPrefab;
-		[field: SerializeField] public float SpawnRate { get; set; } = 1f;
+		[field: SerializeField] public float SpawnRate { get; set; } = 3f;
 		private WaitForSeconds _waitTime;
 
 		private void Awake()

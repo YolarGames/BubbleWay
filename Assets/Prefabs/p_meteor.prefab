@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28027622934923359}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.8730061, w: 0.4877094}
-  m_LocalPosition: {x: -0.01909189, y: -0.1576848, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 0.49999997, y: 0.49999997, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 9119923549484294266}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 76.62}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3324831031731631134
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -129,9 +129,9 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486722925438605892}
   m_Enabled: 1
-  m_SortingLayerID: 1248874047
-  m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingLayerID: 1224607603
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!1 &1624342539037337281
 GameObject:
@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _flameRenderer: {fileID: 2123902939634087288}
+  _meteorRenderer: {fileID: 3324831031731631134}
 --- !u!58 &8138438257190154503
 CircleCollider2D:
   m_ObjectHideFlags: 0
