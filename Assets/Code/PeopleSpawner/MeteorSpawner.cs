@@ -21,14 +21,6 @@ namespace PeopleSpawner
 			StartCoroutine(FallRoutine());
 		}
 
-		private void OnDrawGizmos()
-		{
-			Gizmos.color = Color.red;
-			Gizmos.DrawLine(
-				from: new Vector3(-StaticData.GetHalfScreenWidth(), transform.position.y),
-				to: new Vector3(StaticData.GetHalfScreenWidth(), transform.position.y));
-		}
-
 		private IEnumerator FallRoutine()
 		{
 			while (true)

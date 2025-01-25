@@ -21,14 +21,6 @@ namespace BubbleSpawner
 			GameEvents.OnBubbleEndBlow -= ReleaseBubble;
 		}
 
-		private void OnDrawGizmos()
-		{
-			Gizmos.color = Color.green;
-			Gizmos.DrawLine(
-				from: new Vector3(-StaticData.GetHalfScreenWidth(), transform.position.y),
-				to: new Vector3(StaticData.GetHalfScreenWidth(), transform.position.y));
-		}
-
 		private void ReleaseBubble() =>
 			_spawnedBubble.Release();
 
