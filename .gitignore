@@ -9,6 +9,7 @@
 /out
 /.vscode/
 /.idea
+/.utmp
 /Assets/Plugins/Editor/JetBrains*
 /[Uu]ser[Ss]ettings/
 /UserSettings/
@@ -32,9 +33,6 @@
 
 # Gradle cache directory
 .gradle/
-
-# Unity temp files
-.utmp/
 
 # User settings
 [Uu]serSettings*
