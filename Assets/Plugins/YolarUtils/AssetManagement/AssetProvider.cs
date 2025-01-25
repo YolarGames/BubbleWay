@@ -37,7 +37,7 @@ namespace YolarUtils.AssetManagement
 		{
 			Object[] configInstances = Resources.LoadAll(path, typeof(T));
 			if (configInstances.Length <= 0)
-				throw new FileNotFoundException($"{typeof(T).Name} not found.");
+				throw new FileNotFoundException($"{typeof(T).Name} not found by path: {path}");
 			return configInstances;
 		}
 	}
