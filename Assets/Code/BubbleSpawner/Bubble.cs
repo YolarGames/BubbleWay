@@ -12,7 +12,6 @@ namespace BubbleSpawner
 	{
 		[SerializeField] private SpriteRenderer _spriteRenderer;
 		[SerializeField] private ParticleSystem _popParticles;
-		private const float StartSize = 0.5f;
 		private CircleCollider2D _collider;
 		private Coroutine _growRoutine;
 		private Rigidbody2D _rigidbody;
@@ -25,7 +24,7 @@ namespace BubbleSpawner
 		}
 
 		private void Start() =>
-			transform.localScale = Vector3.one * StartSize;
+			transform.localScale = Vector3.one * StaticData.MinSize;
 
 		private void OnTriggerEnter2D(Collider2D other)
 		{

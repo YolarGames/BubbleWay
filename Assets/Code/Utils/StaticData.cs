@@ -4,7 +4,7 @@ namespace Utils
 {
 	public static class StaticData
 	{
-		private const float MinSize = 1f;
+		public const float MinSize = 0.5f;
 		public const float MaxSize = 2.5f;
 		public const float Threshold = 0.25f;
 		private static Camera s_camera;
