@@ -3,6 +3,7 @@ using PeopleSpawner;
 using PrimeTween;
 using UnityEngine;
 using Utils;
+using YolarUtils.Extension;
 
 namespace BubbleSpawner
 {
@@ -20,6 +21,7 @@ namespace BubbleSpawner
 		{
 			_rigidbody = GetComponent<Rigidbody2D>();
 			_collider = GetComponent<CircleCollider2D>();
+			_collider.enabled = false;
 		}
 
 		private void Start() =>
@@ -30,7 +32,7 @@ namespace BubbleSpawner
 			if (!other.TryGetComponent(out Meteor meteor))
 				return;
 
-			if (!IsFittingSize(meteor))
+			if (!IsFittingSize(meteor) || _growRoutine.NotNull())
 			{
 				Pop();
 				return;
@@ -38,7 +40,7 @@ namespace BubbleSpawner
 
 			_collider.enabled = false;
 			meteor.transform.SetParent(transform);
-			meteor.SetMeteorCout(_rigidbody.linearVelocity);
+			meteor.SetMeteorCaught(_rigidbody.linearVelocity);
 			Tween.LocalPosition(meteor.transform, new Vector3(0, 0.2f), 0.1f, Ease.InBounce);
 		}
 
@@ -48,6 +50,8 @@ namespace BubbleSpawner
 		public void Release()
 		{
 			StopCoroutine(_growRoutine);
+			_growRoutine = null;
+			_collider.enabled = true;
 			LaunchUp();
 		}
 

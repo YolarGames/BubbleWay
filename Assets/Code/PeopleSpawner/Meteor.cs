@@ -7,13 +7,18 @@ namespace PeopleSpawner
 	{
 		[SerializeField] private SpriteRenderer _flameRenderer;
 		[SerializeField] private SpriteRenderer _meteorRenderer;
+		private CircleCollider2D _collider;
 		private Rigidbody2D _rigidbody;
 
-		private void Awake() =>
-			_rigidbody = GetComponent<Rigidbody2D>();
-
-		public void SetMeteorCout(Vector2 velocity)
+		private void Awake()
 		{
+			_rigidbody = GetComponent<Rigidbody2D>();
+			_collider = GetComponent<CircleCollider2D>();
+		}
+
+		public void SetMeteorCaught(Vector2 velocity)
+		{
+			_collider.enabled = false;
 			_flameRenderer.enabled = false;
 			_rigidbody.linearVelocity = velocity;
 		}
