@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Infrastructure;
+using UnityEngine;
 using Utils;
 
 namespace BubbleSpawner
