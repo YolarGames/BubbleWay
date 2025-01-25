@@ -5,7 +5,6 @@
         "PrimeTween.Runtime"
     ],
     "includePlatforms": [
-        "Android",
         "Editor"
     ],
     "excludePlatforms": [],
