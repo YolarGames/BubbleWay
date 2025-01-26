@@ -1,6 +1,6 @@
 ﻿using Infrastructure;
 using UnityEngine;
-using Utils;
+using YolarUtils.Extension;
 
 namespace BubbleSpawner
 {
@@ -21,8 +21,11 @@ namespace BubbleSpawner
 			GameEvents.OnBubbleEndBlow -= ReleaseBubble;
 		}
 
-		private void ReleaseBubble() =>
-			_spawnedBubble.Release();
+		private void ReleaseBubble()
+		{
+			if (_spawnedBubble.NotNull())
+				_spawnedBubble.Release();
+		}
 
 		private void SpawnBubble(Vector3 spawnPosition)
 		{

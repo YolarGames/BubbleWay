@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Audio;
 using PeopleSpawner;
 using PrimeTween;
 using StaticData;
@@ -12,6 +13,8 @@ namespace BubbleSpawner
 	{
 		[SerializeField] private SpriteRenderer _spriteRenderer;
 		[SerializeField] private ParticleSystem _popParticles;
+		[SerializeField] private RandomAudioProviderSo _popAudioProvider;
+		[SerializeField] private RandomAudioProviderSo _catchAudioProvider;
 		private CircleCollider2D _collider;
 		private Coroutine _growRoutine;
 		private Rigidbody2D _rigidbody;
@@ -20,7 +23,6 @@ namespace BubbleSpawner
 		{
 			_rigidbody = GetComponent<Rigidbody2D>();
 			_collider = GetComponent<CircleCollider2D>();
-			_collider.enabled = false;
 		}
 
 		private void Start() =>
@@ -37,10 +39,7 @@ namespace BubbleSpawner
 				return;
 			}
 
-			_collider.enabled = false;
-			meteor.transform.SetParent(transform);
-			meteor.SetMeteorCaught(_rigidbody.linearVelocity);
-			Tween.LocalPosition(meteor.transform, new Vector3(0, 0.2f), 0.1f, Ease.InBounce);
+			GrabMeteor(meteor);
 		}
 
 		public void StartGrow() =>
@@ -48,23 +47,35 @@ namespace BubbleSpawner
 
 		public void Release()
 		{
+			StopGrowing();
+			LaunchUp();
+		}
+
+		private void StopGrowing()
+		{
+			if (!_growRoutine.NotNull())
+				return;
+
 			StopCoroutine(_growRoutine);
 			_growRoutine = null;
-			_collider.enabled = true;
-			LaunchUp();
+		}
+
+		private void GrabMeteor(Meteor meteor)
+		{
+			AudioSource.PlayClipAtPoint(_catchAudioProvider.GetRandom(), transform.position);
+			_collider.enabled = false;
+			meteor.transform.SetParent(transform);
+			meteor.SetMeteorCaught(_rigidbody.linearVelocity);
+			Tween.LocalPosition(meteor.transform, new Vector3(0, 0.2f), 0.1f, Ease.InBounce);
 		}
 
 		private void Pop()
 		{
-			_collider.enabled = false;
+			StopGrowing();
+			AudioSource.PlayClipAtPoint(_popAudioProvider.GetRandom(), transform.position);
 			_spriteRenderer.enabled = false;
 			_popParticles.Play();
-			Invoke(nameof(Destroy), _popParticles.main.duration);
-		}
-
-		private void Destroy()
-		{
-			Destroy(gameObject);
+			Destroy(gameObject, _popParticles.main.duration);
 		}
 
 		private bool IsFittingSize(Meteor component)
