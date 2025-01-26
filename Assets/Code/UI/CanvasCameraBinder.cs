@@ -5,7 +5,7 @@ namespace UI
 {
 	public class CanvasCameraBinder : MonoBehaviour
 	{
-		private void Awake()
+		private void Start()
 		{
 			Debug.Assert(TryGetComponent(out Canvas canvas), "Canvas component not found");
 			canvas.worldCamera = CameraUtils.Camera;

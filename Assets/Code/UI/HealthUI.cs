@@ -13,10 +13,10 @@ public class HealthUI : MonoBehaviour
 
 	private void UpdateHealth()
 	{
-		House house = _houses.FirstOrDefault(house => house.IsBurning);
+		House house = _houses.FirstOrDefault(house => house.gameObject.activeSelf);
 
 		if (house.IsNull()) { }
 		else
-			house.SetOnFire();
+			house.gameObject.SetActive(false);
 	}
 }
