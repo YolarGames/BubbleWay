@@ -2,7 +2,6 @@ using System.Collections;
 using StaticData;
 using TMPro;
 using UnityEngine;
-using Utils;
 using YolarUtils.Extension;
 
 namespace CoreGameLoop
@@ -33,6 +32,15 @@ namespace CoreGameLoop
 		}
 #endif
 
+		public static float GetRandomScreenWidthPosition()
+		{
+			float halfWidth = GetHalfScreenWidth() - 1f;
+			return Random.Range(-halfWidth, halfWidth);
+		}
+
+		public static float GetHalfScreenWidth() =>
+			Camera.main.orthographicSize * Camera.main.aspect;
+
 		private IEnumerator FallRoutine()
 		{
 			yield return new WaitForSeconds(7);
@@ -46,7 +54,7 @@ namespace CoreGameLoop
 
 		private void CreateMeteor()
 		{
-			var randomPosition = new Vector3(CameraUtils.GetRandomScreenWidthPosition(), transform.position.y, 0);
+			var randomPosition = new Vector3(GetRandomScreenWidthPosition(), transform.position.y, 0);
 			Meteor meteor = Instantiate(_meteorPrefab, randomPosition, Quaternion.identity, transform);
 			meteor.Launch(ObjectSizes.GetRandomSize());
 		}

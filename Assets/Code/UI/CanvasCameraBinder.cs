@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Utils;
 
 namespace UI
 {
@@ -8,7 +7,7 @@ namespace UI
 		private void Awake()
 		{
 			var canvas = GetComponent<Canvas>();
-			canvas.worldCamera = CameraUtils.Camera;
+			canvas.worldCamera = Camera.main;
 		}
 	}
 }

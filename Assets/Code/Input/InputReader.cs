@@ -1,7 +1,6 @@
 using Infrastructure;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Utils;
 using YolarUtils.Extension;
 
 namespace Input
@@ -15,6 +14,6 @@ namespace Input
 			GameEvents.InvokeOnBubbleEndBlow();
 
 		private static Vector3 GetScreenToWorldInputPoint(PointerEventData eventData) =>
-			CameraUtils.Camera.ScreenToWorldPoint(eventData.position).SetZ(0);
+			Camera.main.ScreenToWorldPoint(eventData.position).SetZ(0);
 	}
 }
