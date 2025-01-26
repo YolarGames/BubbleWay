@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Audio;
+using Infrastructure;
 using PrimeTween;
 using StaticData;
 using UnityEngine;
@@ -50,7 +51,7 @@ namespace CoreGameLoop
 		{
 			if (_growRoutine.IsNull())
 				return;
-			
+
 			_audioSource.PlayOneShot(_releaseAudioProvider.GetRandom());
 			StopGrowing();
 			LaunchUp();
@@ -67,6 +68,7 @@ namespace CoreGameLoop
 
 		private void ConsumeMeteor(Meteor meteor)
 		{
+			GameEvents.InvokeOnScoreChanged();
 			_audioSource.PlayOneShot(_catchAudioProvider.GetRandom());
 			_collider.enabled = false;
 
