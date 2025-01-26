@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 195f4d81798a4a7eb442b7be1ac4508a, type: 3}
   m_Name: RandomAudioProvider_pop
   m_EditorClassIdentifier: 
-  ExcludeLastPlayed: 1
+  _excludeLastPlayed: 1
   _audioClips:
   - {fileID: 8300000, guid: 88bc42196bc8d054480c96cde2583b2f, type: 3}
   - {fileID: 8300000, guid: a41743c03bd41d945bb274bd2dacc16f, type: 3}

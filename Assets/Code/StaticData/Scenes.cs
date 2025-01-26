@@ -6,6 +6,7 @@ namespace StaticData
 	{
 		public const string MainMenu = "scene_mainMenu";
 		public const string Game = "scene_game";
+		public const string Bootstrap = "scene_bootstrap";
 
 		public static string GetName(Scene scene)
 		{
@@ -13,6 +14,7 @@ namespace StaticData
 			{
 				Scene.MainMenu => MainMenu,
 				Scene.Game => Game,
+				Scene.Bootstrap => Bootstrap,
 				_ => throw new ArgumentOutOfRangeException(),
 			};
 		}
@@ -22,5 +24,6 @@ namespace StaticData
 	{
 		MainMenu = 0,
 		Game = 1,
+		Bootstrap = 2,
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using StaticData;
+using UnityEngine.SceneManagement;
 using UnityEngine.Scripting;
 using YolarUtils.StateMachine;
 
@@ -15,7 +16,10 @@ namespace Infrastructure.StateMachine
 		public void Enter() =>
 			GoToMainMenu();
 
-		private void GoToMainMenu() =>
-			_stateMachine.Enter<LoadLevelState, string>(Scenes.MainMenu);
+		private void GoToMainMenu()
+		{
+			if (SceneManager.GetActiveScene().name == Scenes.Bootstrap)
+				_stateMachine.Enter<LoadLevelState, string>(Scenes.MainMenu);
+		}
 	}
 }
