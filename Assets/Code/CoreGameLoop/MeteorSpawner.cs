@@ -1,5 +1,6 @@
 using System.Collections;
 using StaticData;
+using TMPro;
 using UnityEngine;
 using Utils;
 using YolarUtils.Extension;
@@ -11,6 +12,7 @@ namespace CoreGameLoop
 	{
 		[SerializeField] private Meteor _meteorPrefab;
 		[field: SerializeField] public float SpawnRate { get; set; } = 3f;
+		[SerializeField] private TextMeshProUGUI _tutorialText;
 		private WaitForSeconds _waitTime;
 
 		private void Awake()
@@ -33,8 +35,8 @@ namespace CoreGameLoop
 
 		private IEnumerator FallRoutine()
 		{
-			yield return new WaitForSeconds(2);
-
+			yield return new WaitForSeconds(7);
+			_tutorialText.gameObject.SetActive(false);
 			while (true)
 			{
 				CreateMeteor();
