@@ -21,6 +21,7 @@ namespace CoreGameLoop
 			_collider.enabled = false;
 			_flameRenderer.enabled = false;
 			_rigidbody.linearVelocity = velocity;
+			Destroy(gameObject, 20f);
 		}
 
 		public void Launch(float size)

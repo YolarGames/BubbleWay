@@ -5,7 +5,12 @@ namespace CoreGameLoop
 	[RequireComponent(typeof(BoxCollider2D), typeof(Rigidbody2D))]
 	public class ObjectDestructor : MonoBehaviour
 	{
-		private void OnTriggerEnter2D(Collider2D other) =>
-			Destroy(other.gameObject);
+		[SerializeField] private string _tag;
+
+		private void OnTriggerEnter2D(Collider2D other)
+		{
+			if (_tag == string.Empty || CompareTag(_tag))
+				Destroy(other.gameObject);
+		}
 	}
 }
