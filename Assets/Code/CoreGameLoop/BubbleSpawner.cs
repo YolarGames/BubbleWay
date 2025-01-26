@@ -7,6 +7,8 @@ namespace CoreGameLoop
 	public class BubbleSpawner : MonoBehaviour
 	{
 		[SerializeField] private Bubble _bubblePrefab;
+		[SerializeField] private Mage _mage;
+
 		private Bubble _spawnedBubble;
 
 		private void OnEnable()
@@ -20,7 +22,7 @@ namespace CoreGameLoop
 			GameEvents.OnBubbleStartBlow -= SpawnBubble;
 			GameEvents.OnBubbleEndBlow -= ReleaseBubble;
 		}
-		
+
 #if UNITY_EDITOR
 		private void OnDrawGizmos()
 		{
@@ -42,7 +44,8 @@ namespace CoreGameLoop
 		{
 			if (_spawnedBubble.NotNull())
 				return;
-
+			
+			_mage.CastAt(spawnPosition);
 			_spawnedBubble = Instantiate(_bubblePrefab, spawnPosition, Quaternion.identity, transform);
 			_spawnedBubble.StartGrow();
 		}
