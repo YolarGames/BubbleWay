@@ -4,7 +4,7 @@ using UnityEngine;
 using Utils;
 using YolarUtils.Extension;
 
-namespace PeopleSpawner
+namespace CoreGameLoop
 {
 	[SelectionBase]
 	public class MeteorSpawner : MonoBehaviour

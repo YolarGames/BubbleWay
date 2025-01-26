@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace PeopleSpawner
+namespace CoreGameLoop
 {
 	[SelectionBase, RequireComponent(typeof(CircleCollider2D), typeof(Rigidbody2D))]
 	public class Meteor : MonoBehaviour

@@ -2,7 +2,7 @@
 using UnityEngine;
 using YolarUtils.Extension;
 
-namespace BubbleSpawner
+namespace CoreGameLoop
 {
 	public class BubbleSpawner : MonoBehaviour
 	{

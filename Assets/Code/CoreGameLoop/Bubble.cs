@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using Audio;
-using PeopleSpawner;
 using PrimeTween;
 using StaticData;
 using UnityEngine;
 using YolarUtils.Extension;
 
-namespace BubbleSpawner
+namespace CoreGameLoop
 {
 	[RequireComponent(typeof(CircleCollider2D), typeof(Rigidbody2D))]
 	public class Bubble : MonoBehaviour
@@ -16,6 +15,7 @@ namespace BubbleSpawner
 		[SerializeField] private RandomAudioProviderSo _popAudioProvider;
 		[SerializeField] private RandomAudioProviderSo _catchAudioProvider;
 		[SerializeField] private RandomAudioProviderSo _releaseAudioProvider;
+		[SerializeField] private AudioSource _audioSource;
 		private CircleCollider2D _collider;
 		private Coroutine _growRoutine;
 		private Rigidbody2D _rigidbody;
@@ -50,7 +50,8 @@ namespace BubbleSpawner
 		{
 			if (_growRoutine.IsNull())
 				return;
-			AudioSource.PlayClipAtPoint(_releaseAudioProvider.GetRandom(), transform.position);
+			
+			_audioSource.PlayOneShot(_releaseAudioProvider.GetRandom());
 			StopGrowing();
 			LaunchUp();
 		}
@@ -59,14 +60,14 @@ namespace BubbleSpawner
 		{
 			if (_growRoutine.IsNull())
 				return;
-			
+
 			StopCoroutine(_growRoutine);
 			_growRoutine = null;
 		}
 
 		private void ConsumeMeteor(Meteor meteor)
 		{
-			AudioSource.PlayClipAtPoint(_catchAudioProvider.GetRandom(), transform.position);
+			_audioSource.PlayOneShot(_catchAudioProvider.GetRandom());
 			_collider.enabled = false;
 
 			transform.SetParent(meteor.transform);
@@ -77,7 +78,7 @@ namespace BubbleSpawner
 		private void Pop()
 		{
 			StopGrowing();
-			AudioSource.PlayClipAtPoint(_popAudioProvider.GetRandom(), transform.position);
+			_audioSource.PlayOneShot(_popAudioProvider.GetRandom());
 			_collider.enabled = false;
 			_spriteRenderer.enabled = false;
 			_popParticles.Play();
@@ -107,6 +108,7 @@ namespace BubbleSpawner
 		{
 			Vector3 newScale = transform.localScale + Vector3.one * size;
 			transform.localScale = Mathf.Min(newScale.x, ObjectSizes.MaxSize) * Vector3.one;
+			// _audioSource.pitch = -(transform.localScale.x / 2);
 		}
 	}
 }
