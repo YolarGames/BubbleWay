@@ -8,7 +8,7 @@ namespace UI
 		private Button _button;
 
 		private void Awake() =>
-			Debug.Assert(TryGetComponent(out _button), "Button component not found");
+			_button = GetComponent<Button>();
 
 		private void OnEnable() =>
 			_button.onClick.AddListener(ExitGame);

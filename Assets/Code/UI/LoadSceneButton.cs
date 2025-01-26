@@ -13,7 +13,7 @@ namespace UI
 		private ISceneLoader _sceneLoader;
 
 		private void Awake() =>
-			Debug.Assert(TryGetComponent(out _button), "Button component not found");
+			_button = GetComponent<Button>();
 
 		private void OnEnable() =>
 			_button.onClick.AddListener(LoadScene);

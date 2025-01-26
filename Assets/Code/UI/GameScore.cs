@@ -10,7 +10,7 @@ namespace UI
 		private TextMeshProUGUI _text;
 
 		private void Awake() =>
-			Debug.Assert(TryGetComponent(out _text), "TextMeshProUGUI component not found");
+			_text = GetComponent<TextMeshProUGUI>();
 
 		private void OnEnable() =>
 			GameEvents.OnScoreChanged += UpdateScore;

@@ -7,7 +7,7 @@ namespace UI
 	{
 		private void Awake()
 		{
-			Debug.Assert(TryGetComponent(out Canvas canvas), "Canvas component not found");
+			var canvas = GetComponent<Canvas>();
 			canvas.worldCamera = CameraUtils.Camera;
 		}
 	}
