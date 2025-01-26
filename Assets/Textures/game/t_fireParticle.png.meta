@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 7d564f2dafdfb1e4da76b1672e59231d
+guid: 3bab24248b7b45f459748cc18ae68b84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3357892445640887831
-    second: pngimg.com - meteor_PNG232_0
+      213: 470414977270290206
+    second: t_fireParticle_0
   - first:
-      213: -4267320952664349874
-    second: pngimg.com - meteor_PNG232_1
+      213: 5913294861589960365
+    second: t_fireParticle_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1024
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,23 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: t_meteorFlame
+      name: t_fireParticle_0
       rect:
         serializedVersion: 2
-        x: 109
-        y: 137
-        width: 781
-        height: 746
+        x: 0
+        y: 5
+        width: 93
+        height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e17b9f8c9e5661d0800000000000000
-      internalID: -3357892445640887831
+      spriteID: e171831fdef378600800000000000000
+      internalID: 470414977270290206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: t_fireParticle_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 242
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da6563db85e301250800000000000000
+      internalID: 5913294861589960365
       vertices: []
       indices: 
       edges: []
@@ -154,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0c31213a672cd484a884f78e902ad975
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -163,9 +185,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      pngimg.com - meteor_PNG232_1: -4267320952664349874
-      t_meteorFlame: -3357892445640887831
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

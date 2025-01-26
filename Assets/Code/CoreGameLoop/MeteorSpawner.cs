@@ -33,6 +33,8 @@ namespace CoreGameLoop
 
 		private IEnumerator FallRoutine()
 		{
+			yield return new WaitForSeconds(2);
+
 			while (true)
 			{
 				CreateMeteor();
