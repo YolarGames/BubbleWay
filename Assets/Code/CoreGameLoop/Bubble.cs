@@ -15,6 +15,7 @@ namespace BubbleSpawner
 		[SerializeField] private ParticleSystem _popParticles;
 		[SerializeField] private RandomAudioProviderSo _popAudioProvider;
 		[SerializeField] private RandomAudioProviderSo _catchAudioProvider;
+		[SerializeField] private RandomAudioProviderSo _releaseAudioProvider;
 		private CircleCollider2D _collider;
 		private Coroutine _growRoutine;
 		private Rigidbody2D _rigidbody;
@@ -39,7 +40,7 @@ namespace BubbleSpawner
 				return;
 			}
 
-			GrabMeteor(meteor);
+			ConsumeMeteor(meteor);
 		}
 
 		public void StartGrow() =>
@@ -47,32 +48,37 @@ namespace BubbleSpawner
 
 		public void Release()
 		{
+			if (_growRoutine.IsNull())
+				return;
+			AudioSource.PlayClipAtPoint(_releaseAudioProvider.GetRandom(), transform.position);
 			StopGrowing();
 			LaunchUp();
 		}
 
 		private void StopGrowing()
 		{
-			if (!_growRoutine.NotNull())
+			if (_growRoutine.IsNull())
 				return;
-
+			
 			StopCoroutine(_growRoutine);
 			_growRoutine = null;
 		}
 
-		private void GrabMeteor(Meteor meteor)
+		private void ConsumeMeteor(Meteor meteor)
 		{
 			AudioSource.PlayClipAtPoint(_catchAudioProvider.GetRandom(), transform.position);
 			_collider.enabled = false;
-			meteor.transform.SetParent(transform);
+
+			transform.SetParent(meteor.transform);
 			meteor.SetMeteorCaught(_rigidbody.linearVelocity);
-			Tween.LocalPosition(meteor.transform, new Vector3(0, 0.2f), 0.1f, Ease.InBounce);
+			Tween.LocalPosition(transform, new Vector3(0, -0.2f), 0.2f, Ease.InBounce);
 		}
 
 		private void Pop()
 		{
 			StopGrowing();
 			AudioSource.PlayClipAtPoint(_popAudioProvider.GetRandom(), transform.position);
+			_collider.enabled = false;
 			_spriteRenderer.enabled = false;
 			_popParticles.Play();
 			Destroy(gameObject, _popParticles.main.duration);

@@ -4943,6 +4943,7 @@ MonoBehaviour:
   _popParticles: {fileID: 3309190786232571674}
   _popAudioProvider: {fileID: 11400000, guid: 954badaaa193bd845ad10412322af69a, type: 2}
   _catchAudioProvider: {fileID: 11400000, guid: 87214b00b2e63df4eaa454ed25fbf3d6, type: 2}
+  _releaseAudioProvider: {fileID: 11400000, guid: fe504e5ca7bda804f90fa9b35810df10, type: 2}
 --- !u!58 &1579961812892161525
 CircleCollider2D:
   m_ObjectHideFlags: 0

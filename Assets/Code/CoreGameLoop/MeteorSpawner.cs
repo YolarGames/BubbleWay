@@ -2,6 +2,7 @@ using System.Collections;
 using StaticData;
 using UnityEngine;
 using Utils;
+using YolarUtils.Extension;
 
 namespace PeopleSpawner
 {
@@ -21,6 +22,14 @@ namespace PeopleSpawner
 		{
 			StartCoroutine(FallRoutine());
 		}
+
+#if UNITY_EDITOR
+		private void OnDrawGizmos()
+		{
+			Gizmos.color = Color.yellow;
+			Gizmos.DrawLine(transform.position.SetX(-5), transform.position.SetX(5));
+		}
+#endif
 
 		private IEnumerator FallRoutine()
 		{

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Code
+namespace Utils
 {
 	public class Collider2dEventProvider : MonoBehaviour
 	{
