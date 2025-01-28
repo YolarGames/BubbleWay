@@ -5,6 +5,7 @@ using StaticData;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
+using YolarUtils.Extension;
 using YolarUtils.SceneManagement;
 
 namespace UI
@@ -49,6 +50,9 @@ namespace UI
 		private void PlayFx(Vector3 position)
 		{
 			_audioSource.PlayOneShot(_popAudioProvider.GetRandom());
+			
+			if (_popParticles.IsNull())
+				return;
 			_popParticles.transform.position = position;
 			_popParticles.Play();
 		}

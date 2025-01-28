@@ -80,7 +80,7 @@ namespace CoreGameLoop
 
 			transform.SetParent(meteor.transform);
 			meteor.SetMeteorCaught(_rigidbody.linearVelocity);
-			Tween.LocalPosition(transform, new Vector3(0, -0.2f), 0.3f, Ease.OutBounce);
+			Tween.LocalPosition(transform, Vector2.zero, 0.3f, Ease.OutBounce);
 		}
 
 		private bool CanConsumeMeteor(Meteor meteor)

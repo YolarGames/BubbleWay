@@ -13,7 +13,6 @@ namespace Infrastructure
 		{
 			base.Configure(builder);
 			builder.RegisterEntryPoint<GameTutorial>();
-			builder.RegisterBuildCallback(_ => _meteorSpawner.StartSpawning());
 		}
 	}
 }

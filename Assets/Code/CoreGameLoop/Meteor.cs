@@ -31,6 +31,8 @@ namespace CoreGameLoop
 			_audioSource.PlayOneShot(_spawnAudioProvider.GetRandom());
 			transform.localScale = Vector3.one * size;
 			_rigidbody.AddForce(Vector2.down * 1 / size, ForceMode2D.Impulse);
+			int torqueDirection = Random.Range(0, 2) == 0 ? -1 : 1;
+			_rigidbody.AddTorque(torqueDirection / size, ForceMode2D.Impulse);
 		}
 	}
 }
