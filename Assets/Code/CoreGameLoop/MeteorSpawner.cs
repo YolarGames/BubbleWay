@@ -1,8 +1,8 @@
 using System.Collections;
 using StaticData;
-using TMPro;
 using UnityEngine;
 using YolarUtils.Extension;
+using Random = UnityEngine.Random;
 
 namespace CoreGameLoop
 {
@@ -11,18 +11,12 @@ namespace CoreGameLoop
 	{
 		[SerializeField] private Meteor _meteorPrefab;
 		[field: SerializeField] public float SpawnRate { get; set; } = 3f;
-		[SerializeField] private TextMeshProUGUI _tutorialText;
-		private WaitForSeconds _waitTime;
+		private const float AwayFromBordersGap = 1f;
+		private Camera _camera;
+		private Coroutine _fallRoutine;
 
-		private void Awake()
-		{
-			_waitTime = new WaitForSeconds(SpawnRate);
-		}
-
-		private void Start()
-		{
-			StartCoroutine(FallRoutine());
-		}
+		private void Awake() =>
+			_camera = Camera.main;
 
 #if UNITY_EDITOR
 		private void OnDrawGizmos()
@@ -32,23 +26,24 @@ namespace CoreGameLoop
 		}
 #endif
 
-		public static float GetRandomScreenWidthPosition()
+		public void StartSpawning() =>
+			_fallRoutine = StartCoroutine(FallRoutine());
+
+		public void StopSpawning()
 		{
-			float halfWidth = GetHalfScreenWidth() - 1f;
-			return Random.Range(-halfWidth, halfWidth);
+			if (_fallRoutine.NotNull())
+				StopCoroutine(_fallRoutine);
 		}
 
-		public static float GetHalfScreenWidth() =>
-			Camera.main.orthographicSize * Camera.main.aspect;
+		public void DestroyAllMeteors() =>
+			FindObjectsByType<Meteor>(FindObjectsSortMode.None).ForEach(meteor => Destroy(meteor.gameObject));
 
 		private IEnumerator FallRoutine()
 		{
-			yield return new WaitForSeconds(7);
-			_tutorialText.gameObject.SetActive(false);
 			while (true)
 			{
 				CreateMeteor();
-				yield return _waitTime;
+				yield return new WaitForSeconds(SpawnRate);
 			}
 		}
 
@@ -58,5 +53,14 @@ namespace CoreGameLoop
 			Meteor meteor = Instantiate(_meteorPrefab, randomPosition, Quaternion.identity, transform);
 			meteor.Launch(ObjectSizes.GetRandomSize());
 		}
+
+		private float GetRandomScreenWidthPosition()
+		{
+			float halfWidth = GetHalfScreenWidth() - AwayFromBordersGap;
+			return Random.Range(-halfWidth, halfWidth);
+		}
+
+		private float GetHalfScreenWidth() =>
+			_camera.orthographicSize * _camera.aspect;
 	}
 }

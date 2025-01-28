@@ -165,7 +165,6 @@ GameObject:
   - component: {fileID: 5257298966092719753}
   - component: {fileID: 9003870416229417620}
   - component: {fileID: 3284815533397303283}
-  - component: {fileID: 7162589912127219770}
   m_Layer: 5
   m_Name: p_button
   m_TagString: Untagged
@@ -289,16 +288,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetY: 0
   _duration: 5
---- !u!114 &7162589912127219770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5405433818516500692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6404649680df4b319a641991a87bdf45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioProvider: {fileID: 11400000, guid: 87214b00b2e63df4eaa454ed25fbf3d6, type: 2}

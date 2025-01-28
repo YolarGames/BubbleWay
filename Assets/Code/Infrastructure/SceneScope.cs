@@ -2,5 +2,5 @@
 
 namespace Infrastructure
 {
-	public class SceneScope : LifetimeScope { }
+	public class SceneScope : LifetimeScope {}
 }

@@ -1,4 +1,5 @@
-﻿using Infrastructure;
+﻿using System.Threading;
+using Infrastructure;
 using UnityEngine;
 using YolarUtils.Extension;
 
@@ -8,7 +9,6 @@ namespace CoreGameLoop
 	{
 		[SerializeField] private Bubble _bubblePrefab;
 		[SerializeField] private Mage _mage;
-
 		private Bubble _spawnedBubble;
 
 		private void OnEnable()
@@ -31,6 +31,10 @@ namespace CoreGameLoop
 		}
 #endif
 
+		public void DestroyAllBubbles() =>
+			FindObjectsByType<Bubble>(FindObjectsSortMode.None)
+				.ForEach(bubble => bubble.Pop());
+
 		private void ReleaseBubble()
 		{
 			if (_spawnedBubble.NotNull())
@@ -44,7 +48,7 @@ namespace CoreGameLoop
 		{
 			if (_spawnedBubble.NotNull())
 				return;
-			
+
 			_mage.CastAt(spawnPosition);
 			_spawnedBubble = Instantiate(_bubblePrefab, spawnPosition, Quaternion.identity, transform);
 			_spawnedBubble.StartGrow();

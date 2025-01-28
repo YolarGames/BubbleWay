@@ -15,7 +15,6 @@ namespace CoreGameLoop
 		[SerializeField] private ParticleSystem _popParticles;
 		[SerializeField] private RandomAudioProviderSo _popAudioProvider;
 		[SerializeField] private RandomAudioProviderSo _catchAudioProvider;
-		[SerializeField] private RandomAudioProviderSo _releaseAudioProvider;
 		[SerializeField] private AudioSource _audioSource;
 		private CircleCollider2D _collider;
 		private Coroutine _growRoutine;
@@ -35,13 +34,20 @@ namespace CoreGameLoop
 			if (!other.TryGetComponent(out Meteor meteor))
 				return;
 
-			if (!IsFittingSize(meteor) || _growRoutine.NotNull())
-			{
+			if (CanConsumeMeteor(meteor))
+				ConsumeMeteor(meteor);
+			else
 				Pop();
-				return;
-			}
+		}
 
-			ConsumeMeteor(meteor);
+		public void Pop()
+		{
+			StopGrowing();
+			_audioSource.PlayOneShot(_popAudioProvider.GetRandom());
+			_collider.enabled = false;
+			_spriteRenderer.enabled = false;
+			_popParticles.Play();
+			Destroy(gameObject, _popParticles.main.duration);
 		}
 
 		public void StartGrow() =>
@@ -52,7 +58,7 @@ namespace CoreGameLoop
 			if (_growRoutine.IsNull())
 				return;
 
-			_audioSource.PlayOneShot(_releaseAudioProvider.GetRandom());
+			_audioSource.PlayOneShot(_popAudioProvider.GetRandom());
 			StopGrowing();
 			LaunchUp();
 		}
@@ -74,17 +80,12 @@ namespace CoreGameLoop
 
 			transform.SetParent(meteor.transform);
 			meteor.SetMeteorCaught(_rigidbody.linearVelocity);
-			Tween.LocalPosition(transform, new Vector3(0, -0.2f), 0.2f, Ease.InBounce);
+			Tween.LocalPosition(transform, new Vector3(0, -0.2f), 0.3f, Ease.OutBounce);
 		}
 
-		private void Pop()
+		private bool CanConsumeMeteor(Meteor meteor)
 		{
-			StopGrowing();
-			_audioSource.PlayOneShot(_popAudioProvider.GetRandom());
-			_collider.enabled = false;
-			_spriteRenderer.enabled = false;
-			_popParticles.Play();
-			Destroy(gameObject, _popParticles.main.duration);
+			return IsFittingSize(meteor) && _growRoutine.IsNull();
 		}
 
 		private bool IsFittingSize(Meteor component)
@@ -110,7 +111,6 @@ namespace CoreGameLoop
 		{
 			Vector3 newScale = transform.localScale + Vector3.one * size;
 			transform.localScale = Mathf.Min(newScale.x, ObjectSizes.MaxSize) * Vector3.one;
-			// _audioSource.pitch = -(transform.localScale.x / 2);
 		}
 	}
 }
