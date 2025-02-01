@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5522805957912214465
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2852755610200396284, guid: bde02452b0c601347b62acea06b0fba3, type: 3}
+      propertyPath: m_Name
+      value: p_house3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3848271499366828395, guid: bde02452b0c601347b62acea06b0fba3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8374739308806101461, guid: 5326c07332572184c8c26e48cd090e89, type: 3}
+    - target: {fileID: 3848271499366828395, guid: bde02452b0c601347b62acea06b0fba3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310624837274298604, guid: bde02452b0c601347b62acea06b0fba3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639936729994205755, guid: bde02452b0c601347b62acea06b0fba3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639936729994205755, guid: bde02452b0c601347b62acea06b0fba3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639936729994205755, guid: bde02452b0c601347b62acea06b0fba3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639936729994205755, guid: bde02452b0c601347b62acea06b0fba3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639936729994205755, guid: bde02452b0c601347b62acea06b0fba3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182459484800079522, guid: bde02452b0c601347b62acea06b0fba3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bde02452b0c601347b62acea06b0fba3, type: 3}

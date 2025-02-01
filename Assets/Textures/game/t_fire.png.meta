@@ -153,103 +153,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: t_fire_0
+      name: t_spark
       rect:
         serializedVersion: 2
-        x: 350
-        y: 1138
-        width: 42
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8c422091f1e7d24f0800000000000000
-      internalID: -851886082474498872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: t_fire_1
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 928
-        width: 41
-        height: 132
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5c92af29eecad82c0800000000000000
-      internalID: -4427692717967267387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: t_fire_2
-      rect:
-        serializedVersion: 2
-        x: 403
-        y: 949
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c62b2fc7a5e1d9620800000000000000
-      internalID: 2782413518777004652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: t_fire_3
-      rect:
-        serializedVersion: 2
-        x: 412
-        y: 914
-        width: 31
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3883ff2938c670ea0800000000000000
-      internalID: -5906633073910400893
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: t_fire_4
-      rect:
-        serializedVersion: 2
-        x: 552
-        y: 747
+        x: 810
+        y: 740
         width: 61
         height: 238
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,59 +175,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: t_fire_5
+      name: t_fire
       rect:
         serializedVersion: 2
-        x: 18
-        y: 545
-        width: 24
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5cd01a7eeae8522c0800000000000000
-      internalID: -4456999374351692347
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: t_fire_6
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 559
-        width: 24
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd2436242785635a0800000000000000
-      internalID: -6541944160945749284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: t_fire_7
-      rect:
-        serializedVersion: 2
-        x: 31
+        x: 0
         y: 0
-        width: 731
-        height: 948
+        width: 1280
+        height: 1280
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -328,55 +196,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: t_fire_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 478
-        width: 32
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 96fb892ad77fb00f0800000000000000
-      internalID: -1149553160892137623
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: t_fire_9
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 493
-        width: 35
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d2df5546e4da175b0800000000000000
-      internalID: -5372322328273879763
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 20d6e51ce30f9c04d8287e42c536e22c
     internalID: 0
     vertices: []
     indices: 
@@ -385,7 +209,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      t_fire: 3065745689232823254
+      t_spark: -3502984465443453103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

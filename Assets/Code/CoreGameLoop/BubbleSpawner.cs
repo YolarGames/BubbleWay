@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using Infrastructure;
+﻿using Infrastructure;
 using UnityEngine;
 using YolarUtils.Extension;
 
