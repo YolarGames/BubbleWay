@@ -1,6 +1,4 @@
-﻿using System;
-using Audio;
-using Cysharp.Threading.Tasks;
+﻿using Audio;
 using StaticData;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,28 +27,24 @@ namespace UI
 		private void Construct(ISceneLoader sceneLoader) =>
 			_sceneLoader = sceneLoader;
 
-		private async void Play()
+		private void Play()
 		{
 			PlayFx(_playButton.transform.position);
 			_exitButton.interactable = false;
-
-			await UniTask.Delay(TimeSpan.FromSeconds(_popParticles.main.duration));
 			_sceneLoader.Load(Scenes.Game);
 		}
 
-		private async void Exit()
+		private void Exit()
 		{
 			PlayFx(_exitButton.transform.position);
 			_exitButton.interactable = false;
-
-			await UniTask.Delay(TimeSpan.FromSeconds(_popParticles.main.duration));
 			Application.Quit();
 		}
 
 		private void PlayFx(Vector3 position)
 		{
 			_audioSource.PlayOneShot(_popAudioProvider.GetRandom());
-			
+
 			if (_popParticles.IsNull())
 				return;
 			_popParticles.transform.position = position;
