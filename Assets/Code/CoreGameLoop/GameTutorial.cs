@@ -19,10 +19,15 @@ namespace CoreGameLoop
 		private const float AnimationDuration = 0.5f;
 		private const string TutorialBoolKey = "Tutorial";
 
+		private void Awake()
+		{
+			if (TutorialFinished())
+				gameObject.SetActive(false);
+		}
+
 		private void Start()
 		{
-			if (!TutorialFinished())
-				StartTutorial().Forget();
+			StartTutorial().Forget();
 		}
 
 		private static bool TutorialFinished() =>
