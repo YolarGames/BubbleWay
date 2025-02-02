@@ -1,10 +1,7 @@
 using System.Linq;
 using Infrastructure;
-using Infrastructure.StateMachine;
-using StaticData;
 using UI;
 using UnityEngine;
-using VContainer;
 using YolarUtils.Extension;
 using YolarUtils.StateMachine;
 
@@ -21,16 +18,12 @@ namespace CoreGameLoop
 		private void OnDisable() =>
 			GameEvents.OnDamage -= UpdateHealth;
 
-		[Inject]
-		private void Construct(IGameStateMachine stateMachine) =>
-			_stateMachine = stateMachine;
-
 		private void UpdateHealth()
 		{
 			House house = _houses.FirstOrDefault(house => !house.IsBurning);
 
 			if (house.IsNull())
-				_stateMachine.Enter<LoadLevelState, string>(Scenes.MainMenu);
+				GameEvents.InvokeOnGameOver();
 			else
 				house.SetOnFire();
 		}

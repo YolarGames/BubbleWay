@@ -4845,7 +4845,7 @@ GameObject:
   - component: {fileID: 3963206352014045748}
   - component: {fileID: 3636731219084548353}
   m_Layer: 0
-  m_Name: p_fireParticles
+  m_Name: p_particles_fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

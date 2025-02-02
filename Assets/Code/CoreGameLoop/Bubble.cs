@@ -48,6 +48,8 @@ namespace CoreGameLoop
 			_spriteRenderer.enabled = false;
 			_popParticles.Play();
 			Destroy(gameObject, _popParticles.main.duration);
+
+			GameEvents.InvokeOnBubblePop();
 		}
 
 		public void StartGrow() =>

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 282439174941662785}
   - component: {fileID: 1508718503955299735}
   m_Layer: 0
-  m_Name: p_popParticles
+  m_Name: p_particles_pop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

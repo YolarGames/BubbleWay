@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8588420058862308680}
   - component: {fileID: 3256958238264248899}
   m_Layer: 0
-  m_Name: p_bubbleParticles
+  m_Name: p_particles_bubblesFlying
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

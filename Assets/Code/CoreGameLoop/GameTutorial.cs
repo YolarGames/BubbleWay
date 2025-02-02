@@ -1,5 +1,6 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
+using Infrastructure;
 using PrimeTween;
 using UI;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace CoreGameLoop
 		[SerializeField] private CanvasGroup _meteorsAreFalling;
 		[SerializeField] private CanvasGroup _castBubblesFromVillage;
 		[SerializeField] private CanvasGroup _bubbleSize;
+		[SerializeField] private CanvasGroup _pressAndHold;
 		[SerializeField] private BubbleSpawner _bubbleSpawner;
 		[SerializeField] private MeteorSpawner _meteorSpawner;
 		[SerializeField] private GameScore _gameScore;
@@ -28,17 +30,33 @@ namespace CoreGameLoop
 			await Show(_meteorsAreFalling, 3);
 			BlinkInputArea(4).Forget();
 			await Show(_castBubblesFromVillage, 3);
-			await Show(_bubbleSize, 3);
 			await _panel.Hide();
+
 			_meteorSpawner.StartSpawning();
 			gameObject.SetActive(false);
+			GameEvents.OnBubblePop += OnBubblePop;
 		}
 
-		private static async UniTask Show(CanvasGroup group, float duration)
+		private async void OnBubblePop()
 		{
-			await group.Show();
-			await UniTask.Delay(TimeSpan.FromSeconds(duration));
-			await group.Hide();
+			Game.Pause(true);
+			GameEvents.OnBubblePop -= OnBubblePop;
+			gameObject.SetActive(true);
+
+			await _panel.Show(true);
+			await Show(_bubbleSize, 3, true);
+			await Show(_pressAndHold, 3, true);
+			await _panel.Hide(true);
+
+			gameObject.SetActive(false);
+			Game.Pause(false);
+		}
+
+		private static async UniTask Show(CanvasGroup group, float duration, bool useUnscaledTime = false)
+		{
+			await group.Show(useUnscaledTime);
+			await UniTask.Delay(TimeSpan.FromSeconds(duration), useUnscaledTime);
+			await group.Hide(useUnscaledTime);
 		}
 
 		private async UniTask BlinkInputArea(int times)
