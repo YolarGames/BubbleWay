@@ -15,26 +15,36 @@ namespace CoreGameLoop
 		[SerializeField] private CanvasGroup _castBubblesFromVillage;
 		[SerializeField] private CanvasGroup _bubbleSize;
 		[SerializeField] private CanvasGroup _pressAndHold;
-		[SerializeField] private BubbleSpawner _bubbleSpawner;
-		[SerializeField] private MeteorSpawner _meteorSpawner;
-		[SerializeField] private GameScore _gameScore;
 		[SerializeField] private UiInputReader _inputReader;
 		private const float AnimationDuration = 0.5f;
+		private const string TutorialBoolKey = "Tutorial";
 
-		private void Start() =>
-			StartTutorial().Forget();
+		private void Start()
+		{
+			if (!TutorialFinished())
+				StartTutorial().Forget();
+		}
+
+		private static bool TutorialFinished() =>
+			PlayerPrefs.GetInt(TutorialBoolKey, 0) == 1;
+
+		private static void SetTutorialFinished() =>
+			PlayerPrefs.SetInt(TutorialBoolKey, 1);
 
 		private async UniTask StartTutorial()
 		{
-			await _panel.Show();
-			await Show(_meteorsAreFalling, 3);
-			BlinkInputArea(4).Forget();
-			await Show(_castBubblesFromVillage, 3);
-			await _panel.Hide();
+			Game.Pause(true);
 
-			_meteorSpawner.StartSpawning();
+			await _panel.Show(true);
+			await Show(_meteorsAreFalling, 3, true);
+			BlinkInputArea(4, true).Forget();
+			await Show(_castBubblesFromVillage, 3, true);
+			await _panel.Hide(true);
+
 			gameObject.SetActive(false);
 			GameEvents.OnBubblePop += OnBubblePop;
+
+			Game.Pause(false);
 		}
 
 		private async void OnBubblePop()
@@ -50,6 +60,7 @@ namespace CoreGameLoop
 
 			gameObject.SetActive(false);
 			Game.Pause(false);
+			SetTutorialFinished();
 		}
 
 		private static async UniTask Show(CanvasGroup group, float duration, bool useUnscaledTime = false)
@@ -59,12 +70,14 @@ namespace CoreGameLoop
 			await group.Hide(useUnscaledTime);
 		}
 
-		private async UniTask BlinkInputArea(int times)
+		private async UniTask BlinkInputArea(int times, bool useUnscaledTime = false)
 		{
 			for (var i = 0; i < times; i++)
 			{
-				await Tween.Color(_inputReader.TargetGraphics, Color.green, AnimationDuration, Ease.OutCubic);
-				await Tween.Color(_inputReader.TargetGraphics, Color.clear, AnimationDuration, Ease.OutCubic);
+				await Tween.Color(_inputReader.TargetGraphics, Color.green, AnimationDuration, Ease.OutCubic,
+					useUnscaledTime: useUnscaledTime);
+				await Tween.Color(_inputReader.TargetGraphics, Color.clear, AnimationDuration, Ease.OutCubic,
+					useUnscaledTime: useUnscaledTime);
 			}
 		}
 	}
