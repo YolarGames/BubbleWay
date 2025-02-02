@@ -9,21 +9,17 @@ using YolarUtils.SceneManagement;
 using YolarUtils.SmartLogger;
 using YolarUtils.StateMachine;
 
-namespace Infrastructure
+namespace Infrastructure.vContainer
 {
 	public class ProjectScope : LifetimeScope
 	{
-#if DEBUG
 		[SerializeField] private GameObject _inGameDebugConsolePrefab;
-#endif
 		[SerializeField] private Camera _cameraPrefab;
 		[SerializeField] private EventSystem _eventSystemPrefab;
 
 		protected override void Configure(IContainerBuilder builder)
 		{
-#if DEBUG
 			Instantiate(_inGameDebugConsolePrefab).DontDestroyOnLoad();
-#endif
 
 			base.Configure(builder);
 
