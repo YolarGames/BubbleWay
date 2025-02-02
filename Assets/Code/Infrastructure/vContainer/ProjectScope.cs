@@ -31,11 +31,18 @@ namespace Infrastructure
 
 			builder.RegisterEntryPoint<GameBootstrapper>();
 
+			RegisterCamera(builder);
 			RegisterStateMachine(builder);
 			builder.Register<IAssetProvider, AssetProvider>(Lifetime.Singleton);
 			builder.Register<ISceneLoader, SceneLoader>(Lifetime.Singleton);
-			builder.RegisterComponentInNewPrefab(_cameraPrefab, Lifetime.Singleton).DontDestroyOnLoad();
 			builder.RegisterComponentInNewPrefab(_eventSystemPrefab, Lifetime.Singleton).DontDestroyOnLoad();
+		}
+
+		private void RegisterCamera(IContainerBuilder builder)
+		{
+			Camera cam = Instantiate(_cameraPrefab);
+			cam.DontDestroyOnLoad();
+			builder.RegisterComponent(cam);
 		}
 
 		private static void RegisterStateMachine(IContainerBuilder builder)

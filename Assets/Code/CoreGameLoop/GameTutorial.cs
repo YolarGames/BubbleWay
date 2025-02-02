@@ -29,7 +29,7 @@ namespace CoreGameLoop
 		{
 			await _panel.Show();
 			await Show(_meteorsAreFalling, 3);
-			BlinkInputArea(5).Forget();
+			BlinkInputArea(4).Forget();
 			await Show(_castBubblesFromVillage, 3);
 			await Show(_bubbleSize, 3);
 			await _panel.Hide();
