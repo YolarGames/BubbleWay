@@ -8,7 +8,7 @@ namespace CoreGameLoop
 	{
 		[SerializeField] private Bubble _bubblePrefab;
 		[SerializeField] private Mage _mage;
-		private const float SpawnPositionOffset = 0.5f;
+		private const float SpawnPositionOffset = 0.75f;
 		private Bubble _spawnedBubble;
 
 		private void OnEnable()
