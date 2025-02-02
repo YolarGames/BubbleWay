@@ -19,11 +19,8 @@ namespace CoreGameLoop
 		[SerializeField] private UiInputReader _inputReader;
 		private const float AnimationDuration = 0.5f;
 
-		private void Start()
-		{
-			Debug.Log("Start tutor");
+		private void Start() =>
 			StartTutorial().Forget();
-		}
 
 		private async UniTask StartTutorial()
 		{

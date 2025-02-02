@@ -8,6 +8,7 @@ namespace CoreGameLoop
 	{
 		[SerializeField] private Bubble _bubblePrefab;
 		[SerializeField] private Mage _mage;
+		private const float SpawnPositionOffset = 0.5f;
 		private Bubble _spawnedBubble;
 
 		private void OnEnable()
@@ -47,9 +48,11 @@ namespace CoreGameLoop
 		{
 			if (_spawnedBubble.NotNull())
 				return;
-
-			_mage.CastAt(spawnPosition);
-			_spawnedBubble = Instantiate(_bubblePrefab, spawnPosition, Quaternion.identity, transform);
+			
+			Vector3 positionWithOffset = spawnPosition.OffsetY(SpawnPositionOffset);
+			
+			_mage.CastAt(positionWithOffset);
+			_spawnedBubble = Instantiate(_bubblePrefab, positionWithOffset, Quaternion.identity, transform);
 			_spawnedBubble.StartGrow();
 		}
 	}
