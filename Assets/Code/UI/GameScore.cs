@@ -6,19 +6,16 @@ namespace UI
 {
 	public class GameScore : MonoBehaviour
 	{
+		[SerializeField] private TextMeshProUGUI _text;
 		private int _score;
-		private TextMeshProUGUI _text;
-
-		private void Awake() =>
-			_text = GetComponent<TextMeshProUGUI>();
 
 		private void OnEnable() =>
 			GameEvents.OnScoreChanged += UpdateScore;
 
-		private void UpdateScore()
-		{
-			_score++;
-			_text.text = _score.ToString();
-		}
+		private void OnDisable() =>
+			GameEvents.OnScoreChanged -= UpdateScore;
+
+		private void UpdateScore() =>
+			_text.text = _score++.ToString();
 	}
 }

@@ -1,18 +1,13 @@
 ﻿using UnityEngine;
 using VContainer;
+using VContainer.Unity;
 
 namespace UI
 {
-	public class CanvasCameraBinder : MonoBehaviour
+	public class CanvasCameraBinder : MonoBehaviour, IStartable
 	{
 		private Camera _camera;
 		private Canvas _canvas;
-
-		private void Start()
-		{
-			_canvas.renderMode = RenderMode.ScreenSpaceCamera;
-			_canvas.worldCamera = _camera;
-		}
 
 #if UNITY_EDITOR
 		private void OnValidate()
@@ -21,6 +16,12 @@ namespace UI
 				canvas.renderMode = RenderMode.ScreenSpaceCamera;
 		}
 #endif
+
+		public void Start()
+		{
+			_canvas.renderMode = RenderMode.ScreenSpaceCamera;
+			_canvas.worldCamera = _camera;
+		}
 
 		[Inject]
 		private void Construct(Camera cam)

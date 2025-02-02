@@ -8,10 +8,6 @@ namespace YolarUtils.Postponer
 	public class PostponedSequence : IAsyncDisposable
 	{
 		private readonly List<PostponedTask> _tasks = new() { PostponedTask.Empty() };
-		public bool AutoRun { get; }
-
-		public PostponedSequence(bool autoRun = false) =>
-			AutoRun = autoRun;
 
 		public async ValueTask DisposeAsync() =>
 			await Run().AsValueTask();

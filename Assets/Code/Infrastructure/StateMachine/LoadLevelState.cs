@@ -19,7 +19,7 @@ namespace Infrastructure.StateMachine
 
 		public async void Enter(string payload)
 		{
-			await Postponer.Sequence(false)
+			await Postponer.Sequence()
 				.Wait(_sceneLoader.LoadingScreen.Appear)
 				.Wait(() => _sceneLoader.Load(payload))
 				.Wait(_sceneLoader.LoadingScreen.Fade)

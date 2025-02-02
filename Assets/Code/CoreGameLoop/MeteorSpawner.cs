@@ -18,9 +18,6 @@ namespace CoreGameLoop
 		private void Awake() =>
 			_camera = Camera.main;
 
-		private void Start() =>
-			StartSpawning();
-
 #if UNITY_EDITOR
 		private void OnDrawGizmos()
 		{

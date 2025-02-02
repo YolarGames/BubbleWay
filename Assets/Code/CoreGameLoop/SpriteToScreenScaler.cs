@@ -1,10 +1,11 @@
 using UnityEngine;
 using VContainer;
+using VContainer.Unity;
 
 namespace CoreGameLoop
 {
 	[RequireComponent(typeof(SpriteRenderer))]
-	public class SpriteToScreenScaler : MonoBehaviour
+	public class SpriteToScreenScaler : MonoBehaviour, IStartable
 	{
 		private Camera _camera;
 		private SpriteRenderer _spriteRenderer;
@@ -12,7 +13,7 @@ namespace CoreGameLoop
 		private float CameraViewHeight => _camera.orthographicSize / _camera.aspect;
 		private float SpriteAspect => _spriteRenderer.sprite.bounds.size.x / _spriteRenderer.sprite.bounds.size.y;
 
-		private void Start()
+		public void Start()
 		{
 			_spriteRenderer.drawMode = SpriteDrawMode.Sliced;
 			_spriteRenderer.size = GetTargetSize();

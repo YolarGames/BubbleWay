@@ -9,8 +9,8 @@ namespace YolarUtils.Postponer
 	{
 		private const bool AutoRun = false;
 
-		public static PostponedSequence Sequence(bool autoRun = true) =>
-			SetUpSequence(new PostponedSequence(autoRun));
+		public static PostponedSequence Sequence() =>
+			new();
 
 		public static async UniTask Wait(Func<UniTask> task) =>
 			await task();
@@ -25,13 +25,6 @@ namespace YolarUtils.Postponer
 		{
 			await UniTask.Yield();
 			await sequence.Run();
-		}
-
-		private static PostponedSequence SetUpSequence(PostponedSequence sequence)
-		{
-			if (sequence.AutoRun)
-				RunSequence(sequence).Forget();
-			return sequence;
 		}
 	}
 }

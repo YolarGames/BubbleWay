@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Infrastructure.StateMachine;
+using PrimeTween;
 using UnityEngine;
 using UnityEngine.Scripting;
 using VContainer.Unity;
@@ -26,6 +27,7 @@ namespace Infrastructure
 			SLogger.Message(LogSenders.Application).WithText("Registering game states").Log();
 
 			Application.targetFrameRate = 60;
+			PrimeTweenConfig.warnEndValueEqualsCurrent = false;
 
 			_gameState.ForEach(_gameStateMachine.RegisterState);
 			_gameStateMachine.Enter<BootstrapState>();
