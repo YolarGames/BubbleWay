@@ -1,8 +1,6 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
 using Infrastructure;
-using PrimeTween;
-using UI;
 using UnityEngine;
 using YolarUtils.Extension;
 
@@ -15,8 +13,6 @@ namespace CoreGameLoop
 		[SerializeField] private CanvasGroup _castBubblesFromVillage;
 		[SerializeField] private CanvasGroup _bubbleSize;
 		[SerializeField] private CanvasGroup _pressAndHold;
-		[SerializeField] private UiInputReader _inputReader;
-		private const float AnimationDuration = 0.5f;
 		private const string TutorialBoolKey = "Tutorial";
 
 		private void Awake()
@@ -25,10 +21,8 @@ namespace CoreGameLoop
 				gameObject.SetActive(false);
 		}
 
-		private void Start()
-		{
+		private void Start() =>
 			StartTutorial().Forget();
-		}
 
 		private static bool TutorialFinished() =>
 			PlayerPrefs.GetInt(TutorialBoolKey, 0) == 1;
@@ -42,7 +36,6 @@ namespace CoreGameLoop
 
 			await _panel.Show(true);
 			await Show(_meteorsAreFalling, 3, true);
-			BlinkInputArea(4, true).Forget();
 			await Show(_castBubblesFromVillage, 3, true);
 			await _panel.Hide(true);
 
@@ -73,17 +66,6 @@ namespace CoreGameLoop
 			await group.Show(useUnscaledTime);
 			await UniTask.Delay(TimeSpan.FromSeconds(duration), useUnscaledTime);
 			await group.Hide(useUnscaledTime);
-		}
-
-		private async UniTask BlinkInputArea(int times, bool useUnscaledTime = false)
-		{
-			for (var i = 0; i < times; i++)
-			{
-				await Tween.Color(_inputReader.TargetGraphics, Color.green, AnimationDuration, Ease.OutCubic,
-					useUnscaledTime: useUnscaledTime);
-				await Tween.Color(_inputReader.TargetGraphics, Color.clear, AnimationDuration, Ease.OutCubic,
-					useUnscaledTime: useUnscaledTime);
-			}
 		}
 	}
 }

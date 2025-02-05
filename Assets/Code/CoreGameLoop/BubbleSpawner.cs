@@ -1,5 +1,6 @@
 ﻿using Infrastructure;
 using UnityEngine;
+using VContainer;
 using YolarUtils.Extension;
 
 namespace CoreGameLoop
@@ -8,8 +9,9 @@ namespace CoreGameLoop
 	{
 		[SerializeField] private Bubble _bubblePrefab;
 		[SerializeField] private Mage _mage;
-		private const float SpawnPositionOffset = 0.75f;
+		private const float SpawnHeight = 1f;
 		private Bubble _spawnedBubble;
+		private Camera _camera;
 
 		private void OnEnable()
 		{
@@ -35,25 +37,32 @@ namespace CoreGameLoop
 			FindObjectsByType<Bubble>(FindObjectsSortMode.None)
 				.ForEach(bubble => bubble.Pop());
 
+		[Inject]
+		private void Construct(Camera cam) =>
+			_camera = cam;
+
 		private void ReleaseBubble()
 		{
-			if (_spawnedBubble.NotNull())
-			{
-				_spawnedBubble.Release();
-				_spawnedBubble = null;
-			}
+			if (_spawnedBubble.IsNull())
+				return;
+
+			_spawnedBubble.Release();
+			_spawnedBubble = null;
 		}
 
-		private void SpawnBubble(Vector3 spawnPosition)
+		private void SpawnBubble(Vector3 inputPosition)
 		{
 			if (_spawnedBubble.NotNull())
 				return;
-			
-			Vector3 positionWithOffset = spawnPosition.OffsetY(SpawnPositionOffset);
-			
-			_mage.CastAt(positionWithOffset);
-			_spawnedBubble = Instantiate(_bubblePrefab, positionWithOffset, Quaternion.identity, transform);
+
+			Vector3 spawnPosition = GetSpawnPosition(inputPosition);
+
+			_mage.CastAt(spawnPosition);
+			_spawnedBubble = Instantiate(_bubblePrefab, spawnPosition, Quaternion.identity, transform);
 			_spawnedBubble.StartGrow();
 		}
+
+		private Vector3 GetSpawnPosition(Vector3 inputPosition) =>
+			inputPosition.SetY(-(_camera.orthographicSize) + SpawnHeight);
 	}
 }
