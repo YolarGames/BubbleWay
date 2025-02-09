@@ -41,7 +41,7 @@ MonoBehaviour:
           isIconRecursive: 1
           isColorRecursive: 0
         - colorIndex: 5
-          iconNameOrGuid: 
+          iconNameOrGuid: Folder Icon
           isIconRecursive: 0
           isColorRecursive: 0
   bookmarks: []

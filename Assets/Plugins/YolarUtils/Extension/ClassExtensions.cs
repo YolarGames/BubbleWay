@@ -53,5 +53,8 @@ namespace YolarUtils.Extension
 
 		public static Vector2 SetY(this Vector2 vector, float y) =>
 			new(vector.x, y);
+
+		public static bool Approximately(this float value, float target, float tolerance = 0.01f) =>
+			Mathf.Abs(value - target) < tolerance;
 	}
 }

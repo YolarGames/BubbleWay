@@ -1,4 +1,5 @@
-﻿using Infrastructure.StateMachine;
+﻿using Infrastructure.Input;
+using Infrastructure.StateMachine;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using VContainer;
@@ -32,6 +33,7 @@ namespace Infrastructure.vContainer
 			builder.Register<IAssetProvider, AssetProvider>(Lifetime.Singleton);
 			builder.Register<ISceneLoader, SceneLoader>(Lifetime.Singleton);
 			builder.RegisterComponentInNewPrefab(_eventSystemPrefab, Lifetime.Singleton).DontDestroyOnLoad();
+			builder.Register<AndroidInputHandler>(Lifetime.Singleton).AsImplementedInterfaces();
 		}
 
 		private void RegisterCamera(IContainerBuilder builder)
