@@ -6,7 +6,7 @@ using VContainer.Unity;
 namespace Infrastructure.Input
 {
 	[Preserve]
-	public class AndroidInputHandler : IInputHandler, ITickable
+	public class InputHandler : IInputHandler, ITickable
 	{
 		public event Action OnBack = delegate { };
 
@@ -14,10 +14,7 @@ namespace Infrastructure.Input
 		{
 			if (UnityEngine.Input.GetKeyDown(KeyCode.Escape)
 			    || UnityEngine.Input.GetKeyDown(KeyCode.Backspace))
-			{
-				Debug.Log("Back button pressed");
 				OnBack.Invoke();
-			}
 		}
 	}
 }

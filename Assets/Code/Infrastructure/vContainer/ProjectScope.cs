@@ -34,7 +34,7 @@ namespace Infrastructure.vContainer
 			builder.Register<IAssetProvider, AssetProvider>(Lifetime.Singleton);
 			builder.Register<ISceneLoader, SceneLoader>(Lifetime.Singleton);
 			builder.RegisterComponentInNewPrefab(_eventSystemPrefab, Lifetime.Singleton).DontDestroyOnLoad();
-			builder.Register<AndroidInputHandler>(Lifetime.Singleton).AsImplementedInterfaces();
+			builder.Register<InputHandler>(Lifetime.Singleton).AsImplementedInterfaces();
 		}
 
 		private void RegisterEventSystem(IContainerBuilder builder)
