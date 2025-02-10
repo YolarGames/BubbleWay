@@ -25,6 +25,6 @@ namespace UI
 		}
 
 		private void UpdateScore() =>
-			_text.text = _score++.ToString();
+			_text.text = (++_score).ToString();
 	}
 }

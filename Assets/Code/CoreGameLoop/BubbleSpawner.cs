@@ -9,7 +9,7 @@ namespace CoreGameLoop
 	{
 		[SerializeField] private Bubble _bubblePrefab;
 		[SerializeField] private Mage _mage;
-		private const float SpawnHeight = 1f;
+		private const float SpawnHeight = 1.5f;
 		private Bubble _spawnedBubble;
 		private Camera _camera;
 
