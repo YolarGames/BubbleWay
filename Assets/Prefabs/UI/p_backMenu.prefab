@@ -238,6 +238,10 @@ PrefabInstance:
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3284815533397303283, guid: 1eebd94e16ac42041b2dde3e695b6a12, type: 3}
+      propertyPath: _duration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284815533397303283, guid: 1eebd94e16ac42041b2dde3e695b6a12, type: 3}
       propertyPath: _unscaledTime
       value: 1
       objectReference: {fileID: 0}

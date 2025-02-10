@@ -54,6 +54,7 @@ namespace UI
 		{
 			_isShown = true;
 			Game.Pause(true);
+			gameObject.SetActive(true);
 			_canvasGroup.interactable = true;
 			_canvasGroup.blocksRaycasts = true;
 			_showHideTween = _canvasGroup.ShowTween(useUnscaledTime: true);
@@ -63,13 +64,10 @@ namespace UI
 		{
 			_isShown = false;
 			Game.Pause(false);
+			_canvasGroup.interactable = false;
+			_canvasGroup.blocksRaycasts = false;
 			_showHideTween = _canvasGroup.HideTween(useUnscaledTime: true)
-				.OnComplete(() =>
-				{
-					_canvasGroup.interactable = false;
-					_canvasGroup.blocksRaycasts = false;
-					gameObject.SetActive(false);
-				});
+				.OnComplete(() => gameObject.SetActive(false));
 		}
 
 		private void GoToMainMenu() =>
