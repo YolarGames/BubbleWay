@@ -20,7 +20,7 @@ namespace YolarUtils.SceneManagement
 		public async UniTask Appear()
 		{
 			CanvasGroup.blocksRaycasts = true;
-			await Tween.Alpha(_canvasGroup, 1, Duration)
+			await Tween.Alpha(_canvasGroup, 1, Duration, useUnscaledTime: true)
 				.ToYieldInstruction()
 				.WithCancellation(this.GetCancellationTokenOnDestroy());
 		}
@@ -28,7 +28,7 @@ namespace YolarUtils.SceneManagement
 		public async UniTask Fade()
 		{
 			CanvasGroup.blocksRaycasts = false;
-			await Tween.Alpha(_canvasGroup, 0, Duration)
+			await Tween.Alpha(_canvasGroup, 0, Duration, useUnscaledTime: true)
 				.ToYieldInstruction()
 				.WithCancellation(this.GetCancellationTokenOnDestroy());
 		}
