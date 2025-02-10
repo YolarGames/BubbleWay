@@ -1,4 +1,5 @@
 ﻿using Audio;
+using Infrastructure;
 using StaticData;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,6 +24,12 @@ namespace UI
 			_exitButton.onClick.AddListener(Exit);
 		}
 
+		private void OnDisable()
+		{
+			_playButton.onClick.RemoveListener(Play);
+			_exitButton.onClick.RemoveListener(Exit);
+		}
+
 		[Inject]
 		private void Construct(ISceneLoader sceneLoader) =>
 			_sceneLoader = sceneLoader;
@@ -38,7 +45,7 @@ namespace UI
 		{
 			PlayFx(_exitButton.transform.position);
 			_exitButton.interactable = false;
-			Application.Quit();
+			Game.Quit();
 		}
 
 		private void PlayFx(Vector3 position)
