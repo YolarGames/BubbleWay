@@ -35,8 +35,8 @@ namespace UI
 
 			_panel.gameObject.SetActive(true);
 
-			_text.Show(duration: 3).Forget();
-			await _panel.Show(duration: 3);
+			_text.ShowAsync(duration: 3).Forget();
+			await _panel.ShowAsync(duration: 3);
 			_stateMachine.Enter<LoadLevelState, string>(Scenes.MainMenu);
 		}
 	}

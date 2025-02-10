@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2643986595368135298}
   - component: {fileID: 7087657476837719764}
   - component: {fileID: 8321116369248725337}
+  - component: {fileID: 5028020089780469719}
   m_Layer: 5
   m_Name: p_score
   m_TagString: Untagged
@@ -79,7 +80,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -98,6 +99,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 4334525693708986991}
+--- !u!114 &5028020089780469719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742604932847413488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5448c982afb24c2685be6c25a9efff50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scalerConfig: {fileID: 11400000, guid: 90c9423d7e99b294a8260d467d00d700, type: 2}
 --- !u!1 &8794589690409244291
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,8 +205,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 120
+  m_fontSizeBase: 120
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

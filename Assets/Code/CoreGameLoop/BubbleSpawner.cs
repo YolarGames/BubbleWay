@@ -1,5 +1,4 @@
 ﻿using Infrastructure;
-using Infrastructure.Input;
 using UnityEngine;
 using VContainer;
 using YolarUtils.Extension;
@@ -13,20 +12,17 @@ namespace CoreGameLoop
 		private const float SpawnHeight = 1f;
 		private Bubble _spawnedBubble;
 		private Camera _camera;
-		private IInputHandler _inputHandler;
 
 		private void OnEnable()
 		{
 			GameEvents.OnBubbleStartBlow += SpawnBubble;
 			GameEvents.OnBubbleEndBlow += ReleaseBubble;
-			_inputHandler.OnBack += DestroyAllBubbles;
 		}
 
 		private void OnDisable()
 		{
 			GameEvents.OnBubbleStartBlow -= SpawnBubble;
 			GameEvents.OnBubbleEndBlow -= ReleaseBubble;
-			_inputHandler.OnBack -= DestroyAllBubbles;
 		}
 
 #if UNITY_EDITOR
@@ -42,10 +38,9 @@ namespace CoreGameLoop
 				.ForEach(bubble => bubble.Pop());
 
 		[Inject]
-		private void Construct(Camera cam, IInputHandler inputHandler)
+		private void Construct(Camera cam)
 		{
 			_camera = cam;
-			_inputHandler = inputHandler;
 		}
 
 		private void ReleaseBubble()

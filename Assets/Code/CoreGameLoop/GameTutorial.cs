@@ -34,10 +34,10 @@ namespace CoreGameLoop
 		{
 			Game.Pause(true);
 
-			await _panel.Show(true);
+			await _panel.ShowAsync(true);
 			await Show(_meteorsAreFalling, 3, true);
 			await Show(_castBubblesFromVillage, 3, true);
-			await _panel.Hide(true);
+			await _panel.HideAsync(true);
 
 			gameObject.SetActive(false);
 			GameEvents.OnBubblePop += OnBubblePop;
@@ -51,10 +51,10 @@ namespace CoreGameLoop
 			GameEvents.OnBubblePop -= OnBubblePop;
 			gameObject.SetActive(true);
 
-			await _panel.Show(true);
+			await _panel.ShowAsync(true);
 			await Show(_bubbleSize, 3, true);
 			await Show(_pressAndHold, 3, true);
-			await _panel.Hide(true);
+			await _panel.HideAsync(true);
 
 			gameObject.SetActive(false);
 			Game.Pause(false);
@@ -63,9 +63,9 @@ namespace CoreGameLoop
 
 		private static async UniTask Show(CanvasGroup group, float duration, bool useUnscaledTime = false)
 		{
-			await group.Show(useUnscaledTime);
+			await group.ShowAsync(useUnscaledTime);
 			await UniTask.Delay(TimeSpan.FromSeconds(duration), useUnscaledTime);
-			await group.Hide(useUnscaledTime);
+			await group.HideAsync(useUnscaledTime);
 		}
 	}
 }
