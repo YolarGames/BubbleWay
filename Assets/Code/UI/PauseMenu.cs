@@ -1,3 +1,4 @@
+using Infrastructure;
 using Infrastructure.Input;
 using Infrastructure.StateMachine;
 using PrimeTween;
@@ -44,13 +45,13 @@ namespace UI
 			{
 				_showHideTween = _canvasGroup.HideTween(useUnscaledTime: true);
 				_isShown = false;
-				Time.timeScale = 1f;
+				Game.Pause(false);
 			}
 			else
 			{
 				_showHideTween = _canvasGroup.ShowTween(useUnscaledTime: true);
 				_isShown = true;
-				Time.timeScale = 0.05f;
+				Game.Pause(true);
 			}
 		}
 
