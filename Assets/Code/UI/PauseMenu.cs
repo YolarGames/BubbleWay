@@ -70,8 +70,11 @@ namespace UI
 				.OnComplete(() => gameObject.SetActive(false));
 		}
 
-		private void GoToMainMenu() =>
+		private void GoToMainMenu()
+		{
+			Game.Pause(false);
 			_stateMachine.Enter<LoadLevelState, string>(Scenes.MainMenu);
+		}
 
 		[Inject]
 		private void Construct(IInputHandler inputHandler, IGameStateMachine stateMachine)
