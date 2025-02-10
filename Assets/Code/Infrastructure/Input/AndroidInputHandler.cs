@@ -12,8 +12,12 @@ namespace Infrastructure.Input
 
 		public void Tick()
 		{
-			if (UnityEngine.Input.GetKeyUp(KeyCode.Escape))
+			if (UnityEngine.Input.GetKeyDown(KeyCode.Escape)
+			    || UnityEngine.Input.GetKeyDown(KeyCode.Backspace))
+			{
+				Debug.Log("Back button pressed");
 				OnBack.Invoke();
+			}
 		}
 	}
 }

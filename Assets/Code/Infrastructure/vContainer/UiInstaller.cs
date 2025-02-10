@@ -8,7 +8,14 @@ namespace Infrastructure.vContainer
 	{
 		[SerializeField] private ParticleSystem _popParticles;
 		[SerializeField] private RectTransform _gameScoreText;
+		[SerializeField] private Canvas[] _sortingOrder;
 		private Camera _camera;
+
+		private void Start()
+		{
+			for (var i = 0; i < _sortingOrder.Length; i++)
+				_sortingOrder[i].sortingOrder = i;
+		}
 
 		private void OnEnable() =>
 			GameEvents.OnScoreChanged += PlayPopParticles;

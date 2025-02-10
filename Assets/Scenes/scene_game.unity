@@ -134,6 +134,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1193954259926186126, guid: d1873b1ceef364147bcfb6983bc03166, type: 3}
   m_PrefabInstance: {fileID: 5520151281703259776}
   m_PrefabAsset: {fileID: 0}
+--- !u!223 &390800549 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 1433448145316817502, guid: d1873b1ceef364147bcfb6983bc03166, type: 3}
+  m_PrefabInstance: {fileID: 5520151281703259776}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &418203290
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +247,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2692019173041237755, guid: d65e2cca9888f8a41a366ea7b1c7360d, type: 3}
   m_PrefabInstance: {fileID: 6638361914029475185}
   m_PrefabAsset: {fileID: 0}
+--- !u!223 &486564545 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2647058706031817639, guid: d65e2cca9888f8a41a366ea7b1c7360d, type: 3}
+  m_PrefabInstance: {fileID: 6638361914029475185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &488221137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9146606258876031095, guid: a2ce8acce5bb9404bb2ceadfd2a7ff77, type: 3}
@@ -265,6 +275,11 @@ Transform:
 --- !u!224 &1062531785 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1681462749597884237, guid: 8cf2767c3688b9d498656d2ab17cd15d, type: 3}
+  m_PrefabInstance: {fileID: 4675537843608334094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &1062531790 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 584029377926238959, guid: 8cf2767c3688b9d498656d2ab17cd15d, type: 3}
   m_PrefabInstance: {fileID: 4675537843608334094}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &1212272318 stripped
@@ -347,6 +362,11 @@ ParticleSystem:
 --- !u!224 &1508226274 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1443165296400359244, guid: 40952f785fc965c429c0ad9e3738e19c, type: 3}
+  m_PrefabInstance: {fileID: 9116015334578723012}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &1517258739 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2643986595368135298, guid: 40952f785fc965c429c0ad9e3738e19c, type: 3}
   m_PrefabInstance: {fileID: 9116015334578723012}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1739223077
@@ -445,6 +465,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _popParticles: {fileID: 1446815546}
   _gameScoreText: {fileID: 1212272318}
+  _sortingOrder:
+  - {fileID: 1517258739}
+  - {fileID: 390800549}
+  - {fileID: 486564545}
+  - {fileID: 1062531790}
 --- !u!4 &1938733853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4099370343804774331, guid: 7b30d0732efdc4e4b91816d41b26e131, type: 3}
@@ -1187,6 +1212,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1443165296400359244, guid: 40952f785fc965c429c0ad9e3738e19c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453258961206616734, guid: 40952f785fc965c429c0ad9e3738e19c, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

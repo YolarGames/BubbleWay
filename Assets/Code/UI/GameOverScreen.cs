@@ -19,7 +19,7 @@ namespace UI
 		{
 			_panel.alpha = 0;
 			_text.alpha = 0;
-			_panel.gameObject.SetActive(false);
+			gameObject.SetActive(false);
 		}
 
 		[Inject]

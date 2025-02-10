@@ -22,6 +22,13 @@ namespace UI
 		private IInputHandler _inputHandler;
 		private Tween _showHideTween;
 
+		private void Awake()
+		{
+			_canvasGroup.alpha = 0;
+			_canvasGroup.interactable = false;
+			_canvasGroup.blocksRaycasts = false;
+		}
+
 		private void OnEnable()
 		{
 			_continueButton.onClick.AddListener(ToggleMenu);
@@ -42,17 +49,31 @@ namespace UI
 				_showHideTween.Stop();
 
 			if (_isShown)
-			{
-				_showHideTween = _canvasGroup.HideTween(useUnscaledTime: true);
-				_isShown = false;
-				Game.Pause(false);
-			}
+				HideScreen();
 			else
-			{
-				_showHideTween = _canvasGroup.ShowTween(useUnscaledTime: true);
-				_isShown = true;
-				Game.Pause(true);
-			}
+				ShowScreen();
+		}
+
+		private void ShowScreen()
+		{
+			_isShown = true;
+			Game.Pause(true);
+			_canvasGroup.interactable = true;
+			_canvasGroup.blocksRaycasts = true;
+			_showHideTween = _canvasGroup.ShowTween(useUnscaledTime: true);
+		}
+
+		private void HideScreen()
+		{
+			_isShown = false;
+			Game.Pause(false);
+			_showHideTween = _canvasGroup.HideTween(useUnscaledTime: true)
+				.OnComplete(() =>
+				{
+					_canvasGroup.interactable = false;
+					_canvasGroup.blocksRaycasts = false;
+					gameObject.SetActive(false);
+				});
 		}
 
 		private void GoToMainMenu() =>

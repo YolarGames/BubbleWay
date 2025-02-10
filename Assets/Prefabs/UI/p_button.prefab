@@ -288,3 +288,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetY: 0
   _duration: 5
+  _unscaledTime: 0

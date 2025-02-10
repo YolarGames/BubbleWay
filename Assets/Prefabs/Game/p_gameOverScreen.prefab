@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8201260510594561732}
   - component: {fileID: 8157968215709432852}
   - component: {fileID: 4162604915514733548}
+  - component: {fileID: 6921355472316018695}
   m_Layer: 0
   m_Name: p_gameOverScreen
   m_TagString: Untagged
@@ -62,7 +63,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &4668160084613374654
 MonoBehaviour:
@@ -116,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 888ad9bae1a7e5943a18c313d390cbeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _panel: {fileID: 3489770132733378466}
+  _panel: {fileID: 6921355472316018695}
   _text: {fileID: 822696377432856617}
 --- !u!114 &4162604915514733548
 MonoBehaviour:
@@ -131,6 +132,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scalerConfig: {fileID: 11400000, guid: 90c9423d7e99b294a8260d467d00d700, type: 2}
+--- !u!225 &6921355472316018695
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790609882211814471}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2963493538853229973
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +304,6 @@ GameObject:
   - component: {fileID: 4604940980068461465}
   - component: {fileID: 5821510159006685951}
   - component: {fileID: 2645613573574799083}
-  - component: {fileID: 3489770132733378466}
   m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
@@ -357,15 +369,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &3489770132733378466
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7366424187386092177}
-  m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0

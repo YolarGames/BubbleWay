@@ -30,7 +30,7 @@ MonoBehaviour:
           isColorRecursive: 0
         - colorIndex: 7
           iconNameOrGuid: Folder Icon
-          isIconRecursive: 1
+          isIconRecursive: 0
           isColorRecursive: 0
         - colorIndex: 5
           iconNameOrGuid: Folder Icon

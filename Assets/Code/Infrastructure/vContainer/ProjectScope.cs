@@ -30,10 +30,18 @@ namespace Infrastructure.vContainer
 
 			RegisterCamera(builder);
 			RegisterStateMachine(builder);
+			// RegisterEventSystem(builder);
 			builder.Register<IAssetProvider, AssetProvider>(Lifetime.Singleton);
 			builder.Register<ISceneLoader, SceneLoader>(Lifetime.Singleton);
 			builder.RegisterComponentInNewPrefab(_eventSystemPrefab, Lifetime.Singleton).DontDestroyOnLoad();
 			builder.Register<AndroidInputHandler>(Lifetime.Singleton).AsImplementedInterfaces();
+		}
+
+		private void RegisterEventSystem(IContainerBuilder builder)
+		{
+			EventSystem eventSystem = Instantiate(_eventSystemPrefab);
+			eventSystem.DontDestroyOnLoad();
+			builder.RegisterComponent(eventSystem);
 		}
 
 		private void RegisterCamera(IContainerBuilder builder)
