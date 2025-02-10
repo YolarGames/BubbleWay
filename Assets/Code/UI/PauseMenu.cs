@@ -22,21 +22,17 @@ namespace UI
 		private IInputHandler _inputHandler;
 		private Tween _showHideTween;
 
-		private void Awake()
+		private void Start()
 		{
 			_canvasGroup.alpha = 0;
 			_canvasGroup.interactable = false;
 			_canvasGroup.blocksRaycasts = false;
-		}
-
-		private void OnEnable()
-		{
 			_continueButton.onClick.AddListener(ToggleMenu);
 			_exitToMainMenuButton.onClick.AddListener(GoToMainMenu);
 			_inputHandler.OnBack += ToggleMenu;
 		}
 
-		private void OnDisable()
+		private void OnDestroy()
 		{
 			_continueButton.onClick.RemoveListener(ToggleMenu);
 			_exitToMainMenuButton.onClick.RemoveListener(GoToMainMenu);
