@@ -4,7 +4,7 @@ using UnityEngine;
 using YolarUtils.Extension;
 using Random = UnityEngine.Random;
 
-namespace CoreGameLoop
+namespace GameLoop
 {
 	[SelectionBase]
 	public class MeteorSpawner : MonoBehaviour

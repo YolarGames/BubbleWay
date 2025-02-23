@@ -1,11 +1,10 @@
 using System.Linq;
 using Infrastructure;
-using UI;
 using UnityEngine;
 using YolarUtils.Extension;
 using YolarUtils.StateMachine;
 
-namespace CoreGameLoop
+namespace GameLoop
 {
 	public class HealthHouses : MonoBehaviour
 	{

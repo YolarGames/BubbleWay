@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CoreGameLoop
+namespace GameLoop
 {
 	[RequireComponent(typeof(BoxCollider2D))]
 	public class ObjectDestructor : MonoBehaviour

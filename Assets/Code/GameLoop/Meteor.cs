@@ -1,7 +1,7 @@
 ﻿using Audio;
 using UnityEngine;
 
-namespace CoreGameLoop
+namespace GameLoop
 {
 	[SelectionBase, RequireComponent(typeof(CircleCollider2D), typeof(Rigidbody2D))]
 	public class Meteor : MonoBehaviour

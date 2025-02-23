@@ -2,7 +2,7 @@
 using UnityEngine;
 using YolarUtils.Extension;
 
-namespace CoreGameLoop
+namespace GameLoop
 {
 	public class Mage : MonoBehaviour
 	{

@@ -2,7 +2,7 @@ using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace CoreGameLoop
+namespace GameLoop
 {
 	[RequireComponent(typeof(SpriteRenderer))]
 	public class SpriteToScreenScaler : MonoBehaviour, IStartable

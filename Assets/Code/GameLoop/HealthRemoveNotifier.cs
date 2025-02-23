@@ -3,7 +3,7 @@ using Infrastructure;
 using StaticData;
 using UnityEngine;
 
-namespace CoreGameLoop
+namespace GameLoop
 {
 	public class HealthRemoveNotifier : MonoBehaviour
 	{

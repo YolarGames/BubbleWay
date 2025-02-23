@@ -6,7 +6,7 @@ using StaticData;
 using UnityEngine;
 using YolarUtils.Extension;
 
-namespace CoreGameLoop
+namespace GameLoop
 {
 	[RequireComponent(typeof(CircleCollider2D), typeof(Rigidbody2D))]
 	public class Bubble : MonoBehaviour

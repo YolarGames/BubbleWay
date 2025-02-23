@@ -4,7 +4,7 @@ using Infrastructure;
 using UnityEngine;
 using YolarUtils.Extension;
 
-namespace CoreGameLoop
+namespace GameLoop
 {
 	public class GameTutorial : MonoBehaviour
 	{

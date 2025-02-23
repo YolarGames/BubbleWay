@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CoreGameLoop
+namespace GameLoop
 {
 	public class House : MonoBehaviour
 	{
