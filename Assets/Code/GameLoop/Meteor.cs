@@ -9,9 +9,9 @@ namespace GameLoop
 		[SerializeField] private SpriteRenderer _meteorRenderer;
 		[SerializeField] private RandomAudioProviderSo _spawnAudioProvider;
 		[SerializeField] private AudioSource _audioSource;
-
 		private CircleCollider2D _collider;
 		private Rigidbody2D _rigidbody;
+		public float Size { get; private set; }
 
 		private void Awake()
 		{
@@ -28,6 +28,7 @@ namespace GameLoop
 
 		public void Launch(float size)
 		{
+			Size = size;
 			_audioSource.PlayOneShot(_spawnAudioProvider.GetRandom());
 			transform.localScale = Vector3.one * size;
 			_rigidbody.AddForce(Vector2.down * 1 / size, ForceMode2D.Impulse);

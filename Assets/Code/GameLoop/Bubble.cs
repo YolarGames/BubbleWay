@@ -19,6 +19,7 @@ namespace GameLoop
 		private CircleCollider2D _collider;
 		private Coroutine _growRoutine;
 		private Rigidbody2D _rigidbody;
+		public float Size { get; private set; }
 
 		private void Awake()
 		{
@@ -113,6 +114,7 @@ namespace GameLoop
 		{
 			Vector3 newScale = transform.localScale + Vector3.one * size;
 			transform.localScale = Mathf.Min(newScale.x, ObjectSizes.MaxSize) * Vector3.one;
+			Size = transform.localScale.x;
 		}
 	}
 }

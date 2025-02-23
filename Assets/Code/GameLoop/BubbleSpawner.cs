@@ -1,4 +1,5 @@
-﻿using Infrastructure;
+﻿using Cysharp.Threading.Tasks;
+using Infrastructure;
 using UnityEngine;
 using VContainer;
 using YolarUtils.Extension;
@@ -32,6 +33,14 @@ namespace GameLoop
 			Gizmos.DrawLine(transform.position.SetX(-5), transform.position.SetX(5));
 		}
 #endif
+
+		public async void BlowBubbleAt(float positionX, float size)
+		{
+			SpawnBubble(new Vector3(positionX, SpawnHeight));
+			while (!_spawnedBubble.Size.Approximately(size))
+				await UniTask.Yield(gameObject.GetCancellationTokenOnDestroy());
+			ReleaseBubble();
+		}
 
 		private void DestroyAllBubbles() =>
 			FindObjectsByType<Bubble>(FindObjectsSortMode.None)
