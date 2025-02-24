@@ -11,15 +11,18 @@ namespace GameLoop.Abilities
 		[SerializeField] private SpriteRenderer _view;
 		[SerializeField] private float _duration;
 		[SerializeField] private float _cooldown;
-		private const float BubbleBounceDuration = 0.5f;
+		private const float BubbleScaleDuration = 0.5f;
 		private const float BubbleScale = 6;
 		private HealthRemoveNotifier _healthRemoveNotifier;
 
 		private void Awake() =>
 			Cleanup();
 
-		private void OnDisable() =>
+		protected override void OnDisable()
+		{
+			base.OnDisable();
 			Cleanup();
+		}
 
 		public override async void Use()
 		{
@@ -40,7 +43,7 @@ namespace GameLoop.Abilities
 		}
 
 		private void UpscaleView() =>
-			Tween.Scale(_view.transform, Vector3.one * BubbleScale, BubbleBounceDuration, Ease.OutBounce);
+			Tween.Scale(_view.transform, Vector3.one * BubbleScale, BubbleScaleDuration, Ease.OutBounce);
 
 		[Inject]
 		private void Construct(HealthRemoveNotifier healthRemoveNotifier) =>
