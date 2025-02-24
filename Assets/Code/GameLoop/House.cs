@@ -13,5 +13,11 @@ namespace GameLoop
 			IsBurning = true;
 			_fireParticles.Play();
 		}
+
+		public void Fix()
+		{
+			IsBurning = false;
+			_fireParticles.Stop();
+		}
 	}
 }

@@ -12,19 +12,23 @@ namespace GameLoop
 		private IGameStateMachine _stateMachine;
 
 		private void OnEnable() =>
-			GameEvents.OnDamage += UpdateHealth;
+			GameEvents.OnDamage += DestroyOne;
 
 		private void OnDisable() =>
-			GameEvents.OnDamage -= UpdateHealth;
+			GameEvents.OnDamage -= DestroyOne;
 
-		private void UpdateHealth()
+		public void FixOne() =>
+			_houses.FirstOrDefault(house => house.IsBurning)
+				?.Fix();
+
+		private void DestroyOne()
 		{
 			House house = _houses.FirstOrDefault(house => !house.IsBurning);
 
+			house?.SetOnFire();
+
 			if (house.IsNull())
 				GameEvents.InvokeOnGameOver();
-			else
-				house.SetOnFire();
 		}
 	}
 }
