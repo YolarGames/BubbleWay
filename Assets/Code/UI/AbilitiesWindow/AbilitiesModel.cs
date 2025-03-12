@@ -6,7 +6,8 @@ namespace UI.AbilitiesWindow
 	[Serializable]
 	public struct AbilitiesModel
 	{
-		[SerializeField] private Vector2 _hidedPosition;
-		[SerializeField] private Vector2 _shownPosition;
+		[field: SerializeField] public Vector2 HidedPosition { get; private set; }
+		[field: SerializeField] public Vector2 ShownPosition { get; private set; }
+		[field: SerializeField] public float AutoCLoseDelay { get; private set; }
 	}
 }

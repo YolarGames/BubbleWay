@@ -17,17 +17,18 @@ namespace UI.PrimitiveMvc
 			View.CanvasGroup = GetComponent<CanvasGroup>();
 		}
 
-		public virtual UniTask Open()
+		public virtual void Open()
 		{
-			return Tween.Alpha(View.CanvasGroup, 1, ShowHideDuration)
+			Tween.Alpha(View.CanvasGroup, 1, ShowHideDuration)
 				.OnComplete(() => { View.Canvas.enabled = false; })
 				.WithCancellation(destroyCancellationToken);
 		}
 
-		public virtual UniTask Close()
+		public virtual void Close()
 		{
 			View.Canvas.enabled = true;
-			return Tween.Alpha(View.CanvasGroup, 0, ShowHideDuration)
+
+			Tween.Alpha(View.CanvasGroup, 0, ShowHideDuration)
 				.WithCancellation(destroyCancellationToken);
 		}
 	}
