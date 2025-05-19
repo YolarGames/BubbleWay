@@ -4,9 +4,7 @@ using UnityEngine.UI;
 namespace UI
 {
 	[CreateAssetMenu(
-		fileName = "canvas_scaler_config",
-		menuName = "Fall&Float/Configs/Canvas Scaler Config",
-		order = 0)]
+		fileName = "canvas_scaler_config", menuName = "Fall And Float/Configs/Canvas Scaler", order = 0)]
 	public class CanvasScalerConfigSo : ScriptableObject
 	{
 		public CanvasScaler.ScaleMode UiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
