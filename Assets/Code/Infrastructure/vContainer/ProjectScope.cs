@@ -30,7 +30,6 @@ namespace Infrastructure.vContainer
 
 			RegisterCamera(builder);
 			RegisterStateMachine(builder);
-			// RegisterEventSystem(builder);
 			builder.Register<IAssetProvider, AssetProvider>(Lifetime.Singleton);
 			builder.Register<ISceneLoader, SceneLoader>(Lifetime.Singleton);
 			builder.RegisterComponentInNewPrefab(_eventSystemPrefab, Lifetime.Singleton).DontDestroyOnLoad();
