@@ -9,7 +9,7 @@ using TMPro;
 #if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
 using UnityEngine.InputSystem;
 #endif
-#if UNITY_EDITOR && UNITY_2021_1_OR_NEWER
+#if UNITY_EDITOR
 using Screen = UnityEngine.Device.Screen; // To support Device Simulator on Unity 2021.1+
 #endif
 
@@ -47,7 +47,6 @@ namespace IngameDebugConsole
 	{
 		public static DebugLogManager Instance { get; private set; }
 
-#pragma warning disable 0649
 		[Header( "Properties" )]
 		[SerializeField]
 		[HideInInspector]
@@ -126,6 +125,10 @@ namespace IngameDebugConsole
 		[Tooltip( "Width of the canvas determines whether the searchbar will be located inside the menu bar or underneath the menu bar. This way, the menu bar doesn't get too crowded on narrow screens. This value determines the minimum width of the canvas for the searchbar to appear inside the menu bar" )]
 		private float topSearchbarMinWidth = 360f;
 
+        [SerializeField, HideInInspector]
+        [Tooltip("If enabled, clicking the resize button of the console window will copy all logs to clipboard. It'll also play a scale animation to give feedback.")]
+        internal bool copyAllLogsOnResizeButtonClick;
+
 		[SerializeField]
 		[HideInInspector]
 		[Tooltip( "If enabled, the console window will continue receiving logs in the background even if its GameObject is inactive. But the console window's GameObject needs to be activated at least once because its Awake function must be triggered for this to work" )]
@@ -199,9 +202,13 @@ namespace IngameDebugConsole
 		[Tooltip( "If enabled, on Android and iOS devices with notch screens, the console window's popup won't be obscured by the screen cutouts" )]
 		internal bool popupAvoidsScreenCutout = false;
 
-		[SerializeField]
-		[Tooltip( "If a log is longer than this limit, it will be truncated. This helps avoid reaching Unity's 65000 vertex limit for UI canvases" )]
-		internal int maxLogLength = 10000;
+        [SerializeField]
+        [Tooltip("If a log that isn't expanded is longer than this limit, it will be truncated. This greatly optimizes scrolling speed of collapsed logs if their log messages are long.")]
+        internal int maxCollapsedLogLength = 200;
+
+        [SerializeField, UnityEngine.Serialization.FormerlySerializedAs("maxLogLength")]
+        [Tooltip("If an expanded log is longer than this limit, it will be truncated. This optimizes scrolling speed while an expanded log is visible.")]
+        internal int maxExpandedLogLength = 10000;
 
 #if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBGL
 		[SerializeField]
@@ -213,6 +220,9 @@ namespace IngameDebugConsole
 		[Header( "Visuals" )]
 		[SerializeField]
 		private DebugLogItem logItemPrefab;
+
+        [SerializeField]
+        internal TMP_FontAsset logItemFontOverride;
 
 		[SerializeField]
 		private TextMeshProUGUI commandSuggestionPrefab;
@@ -314,7 +324,6 @@ namespace IngameDebugConsole
 		// Recycled list view to handle the log items efficiently
 		[SerializeField]
 		private DebugLogRecycledListView recycledListView;
-#pragma warning restore 0649
 
 		private bool isLogWindowVisible = true;
 		public bool IsLogWindowVisible { get { return isLogWindowVisible; } }
@@ -406,6 +415,12 @@ namespace IngameDebugConsole
 
 		// StringBuilder used by various functions
 		internal StringBuilder sharedStringBuilder;
+
+        /// <summary>
+        /// Used for <see cref="TMP_Text.SetText(char[])"/>.
+        /// </summary>
+        [System.NonSerialized]
+        internal char[] textBuffer = new char[4096];
 
 		// Offset of DateTime.Now from DateTime.UtcNow
 		private System.TimeSpan localTimeUtcOffset;
@@ -868,8 +883,6 @@ namespace IngameDebugConsole
 							}
 						}
 					}
-
-					recycledListView.OnViewportWidthChanged();
 				}
 
 				// If SnapToBottom is enabled, force the scrollbar to the bottom
@@ -933,11 +946,8 @@ namespace IngameDebugConsole
 
 			if( screenDimensionsChanged )
 			{
-				// Update the recycled list view
-				if( isLogWindowVisible )
-					recycledListView.OnViewportHeightChanged();
-				else
-					popupManager.UpdatePosition( true );
+                if (!isLogWindowVisible)
+                    popupManager.UpdatePosition(true);
 
 #if UNITY_EDITOR || UNITY_ANDROID || UNITY_IOS
 				CheckScreenCutout();
@@ -1566,12 +1576,46 @@ namespace IngameDebugConsole
 				commandInputFieldAutoCompletedNow = false;
 		}
 
-		// Command input field has lost focus
-		private void OnEndEditCommand( string command )
-		{
-			if( commandSuggestionsContainer.gameObject.activeSelf )
-				commandSuggestionsContainer.gameObject.SetActive( false );
-		}
+        // Command input field has lost focus
+        private void OnEndEditCommand(string command)
+        {
+            if (!commandSuggestionsContainer.gameObject.activeSelf)
+                return;
+
+            // Check if any command suggestion is clicked
+#if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
+            if (visibleCommandSuggestionInstances > 0 && Pointer.current != null && Pointer.current.press.wasPressedThisFrame)
+#else
+            if (visibleCommandSuggestionInstances > 0 && Input.GetMouseButtonDown(0))
+#endif
+            {
+#if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
+                Vector2 pointerPosition = Pointer.current.position.ReadValue();
+#else
+                Vector2 pointerPosition = Input.mousePosition;
+#endif
+
+                Canvas canvas = commandInputField.textComponent.canvas;
+                Camera canvasCamera = (canvas.renderMode == RenderMode.ScreenSpaceOverlay || (canvas.renderMode == RenderMode.ScreenSpaceCamera && canvas.worldCamera == null)) ? null : (canvas.worldCamera != null) ? canvas.worldCamera : Camera.main;
+                if (RectTransformUtility.RectangleContainsScreenPoint(commandSuggestionsContainer, pointerPosition, canvasCamera) && RectTransformUtility.ScreenPointToLocalPointInRectangle(commandSuggestionsContainer, pointerPosition, canvasCamera, out Vector2 localPoint))
+                {
+                    /// <see cref="commandSuggestionInstances"/> have their Pivot Y set to 1 so we need localPoint to have the same pivot value.
+                    localPoint.y -= commandSuggestionsContainer.rect.height;
+
+                    for (int i = 0; i < visibleCommandSuggestionInstances; i++)
+                    {
+                        if (localPoint.y >= commandSuggestionInstances[i].rectTransform.anchoredPosition.y - commandSuggestionInstances[i].rectTransform.sizeDelta.y * commandSuggestionInstances[i].rectTransform.pivot.y)
+                        {
+                            commandInputField.text = matchingCommandSuggestions[i].command + ((matchingCommandSuggestions[i].parameters.Length > 0) ? " " : null);
+                            StartCoroutine(ActivateCommandInputFieldCoroutine());
+                            return;
+                        }
+                    }
+                }
+            }
+
+            commandSuggestionsContainer.gameObject.SetActive(false);
+        }
 
 		// Debug window is being resized,
 		// Set the sizeDelta property of the window accordingly while
@@ -1626,9 +1670,6 @@ namespace IngameDebugConsole
 			anchorMin.y = Mathf.Clamp01( localPoint.y / canvasSize.y );
 
 			logWindowTR.anchorMin = anchorMin;
-
-			// Update the recycled list view
-			recycledListView.OnViewportHeightChanged();
 		}
 
 		// Determine the filtered list of debug entries to show on screen
@@ -1712,27 +1753,41 @@ namespace IngameDebugConsole
 			OnLogEntriesUpdated( true, true );
 		}
 
-		public string GetAllLogs()
+        public string GetAllLogs()
+        {
+            return GetAllLogs(int.MaxValue, float.PositiveInfinity);
+        }
+
+        /// <param name="maxLogCount">Maximum allowed log count.</param>
+        /// <param name="maxElapsedTime">Maximum allowed time interval (in seconds) between now and the logs' arrival time (requires <see cref="captureLogTimestamps"/> to be enabled).</param>
+        public string GetAllLogs(int maxLogCount, float maxElapsedTime)
 		{
 			// Process all pending logs since we want to return "all" logs
 			ProcessQueuedLogs( queuedLogEntries.Count );
 
-			int count = uncollapsedLogEntries.Count;
+            int startIndex = uncollapsedLogEntries.Count - Mathf.Min(uncollapsedLogEntries.Count, maxLogCount);
+            if (uncollapsedLogEntriesTimestamps != null)
+            {
+                float currentElapsedSeconds = Time.realtimeSinceStartup;
+                while (startIndex < uncollapsedLogEntries.Count && currentElapsedSeconds - uncollapsedLogEntriesTimestamps[startIndex].elapsedSeconds > maxElapsedTime)
+                    startIndex++;
+            }
+
 			int length = 0;
 			int newLineLength = System.Environment.NewLine.Length;
-			for( int i = 0; i < count; i++ )
+            for (int i = startIndex; i < uncollapsedLogEntries.Count; i++)
 			{
 				DebugLogEntry entry = uncollapsedLogEntries[i];
 				length += entry.logString.Length + entry.stackTrace.Length + newLineLength * 3;
 			}
 
-			if( uncollapsedLogEntriesTimestamps != null )
-				length += count * 30;
+            if (uncollapsedLogEntriesTimestamps != null)
+                length += (uncollapsedLogEntries.Count - startIndex) * 30;
 
 			length += 200; // Just in case...
 
 			StringBuilder sb = new StringBuilder( length );
-			for( int i = 0; i < count; i++ )
+            for (int i = startIndex; i < uncollapsedLogEntries.Count; i++)
 			{
 				DebugLogEntry entry = uncollapsedLogEntries[i];
 
@@ -1800,17 +1855,22 @@ namespace IngameDebugConsole
 #endif
 		}
 
-#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBGL
-		private IEnumerator ActivateCommandInputFieldCoroutine()
-		{
-			// Waiting 1 frame before activating commandInputField ensures that the toggleKey isn't captured by it
-			yield return null;
-			commandInputField.ActivateInputField();
+        private IEnumerator ActivateCommandInputFieldCoroutine()
+        {
+            yield return null;
 
-			yield return null;
-			commandInputField.MoveTextEnd( false );
-		}
-#endif
+            /// Don't select the text during this automated activation of <see cref="TMP_InputField"/> because it's distracting.
+            bool onFocusSelectAll = commandInputField.onFocusSelectAll;
+            commandInputField.onFocusSelectAll = false;
+
+            commandInputField.ActivateInputField();
+
+            /// Wait for <see cref="TMP_InputField.LateUpdate"/> because input field's activation is handled there.
+            yield return null;
+
+            commandInputField.MoveTextEnd(false);
+            commandInputField.onFocusSelectAll = onFocusSelectAll;
+        }
 
 		// Pool an unused log item
 		internal void PoolLogItem( DebugLogItem logItem )
