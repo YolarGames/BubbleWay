@@ -1,261 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d80b3759-fe18-4d3c-b130-00063152f3ea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Android/DebugLogLogcatListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Android/DebugLogLogcatListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Android/IngameDebugConsole.aar.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Android/IngameDebugConsole.aar.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Editor/DebugLogManagerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Editor/DebugLogManagerEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Editor/DebugLogManagerEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Editor/DebugLogManagerEditor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Editor/IngameDebugConsole.Editor.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Editor/IngameDebugConsole.Editor.asmdef.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/IngameDebugConsole.Runtime.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/IngameDebugConsole.Runtime.asmdef.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/IngameDebugConsole.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/IngameDebugConsole.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/IngameDebugConsole.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/IngameDebugConsole.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Prefabs/CommandSuggestion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Prefabs/CommandSuggestion.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Prefabs/CommandSuggestion.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Prefabs/CommandSuggestion.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Prefabs/DebugLogItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Prefabs/DebugLogItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Prefabs/DebugLogItem.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Prefabs/DebugLogItem.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/README.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/README.txt.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/Attributes/ConsoleAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/Attributes/ConsoleAttribute.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/Attributes/ConsoleCustomTypeParserAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/Attributes/ConsoleCustomTypeParserAttribute.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/Attributes/ConsoleMethodAttribute.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/Attributes/ConsoleMethodAttribute.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/CircularBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/CircularBuffer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/CircularBuffer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/CircularBuffer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogConsole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogConsole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogConsole.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogConsole.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogEntry.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogEntry.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogItem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogItemCopyWebGL.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogItemCopyWebGL.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogPopup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogPopup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogPopup.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogRecycledListView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogRecycledListView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogRecycledListView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogRecycledListView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogResizeListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogResizeListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogResizeListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugLogResizeListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugsOnScrollListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/DebugsOnScrollListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/EventSystemHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/EventSystemHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/EventSystemHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Scripts/EventSystemHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconClear.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconClear.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconCollapse.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconCollapse.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconError.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconError.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconHide.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconHide.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconInfo.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconInfo.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconResizeAllDirections.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconResizeAllDirections.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconResizeVertialOnly.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconResizeVertialOnly.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconSnapToBottom.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconSnapToBottom.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconSnapToBottomBg.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconSnapToBottomBg.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconWarning.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IconWarning.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IngameDebugConsoleSpriteAtlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IngameDebugConsoleSpriteAtlas.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IngameDebugConsoleSpriteAtlas.spriteatlas.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/IngameDebugConsoleSpriteAtlas.spriteatlas.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SearchIcon.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SearchIcon.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SlicedBackground.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SlicedBackground.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SlicedBackground2.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SlicedBackground2.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SlicedBackground3.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/SlicedBackground3.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/Unused/IconErrorHighRes.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/Unused/IconErrorHighRes.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/Unused/IconInfoHighRes.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/Unused/IconInfoHighRes.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/Unused/IconWarningHighRes.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/Sprites/Unused/IconWarningHighRes.psd.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/WebGL.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/WebGL.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/WebGL/IngameDebugConsole.jslib.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/IngameDebugConsole/WebGL/IngameDebugConsole.jslib.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Demo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Demo.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Demo_URP.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Demo_URP.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Animatable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Animatable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Baggage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Baggage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/CameraController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/CameraController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/CameraProjectionMatrixAnimation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/CameraProjectionMatrixAnimation.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Demo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Demo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/DirectionalLightController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/DirectionalLightController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Door.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Door.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Headlights.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Headlights.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/HighlightableElement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/HighlightableElement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/HighlightedElementController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/HighlightedElementController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/InputController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/InputController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/JumpAnimation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/JumpAnimation.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/MeasureAllocations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/MeasureAllocations/DebugInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/MeasureAllocations/DebugInfo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/MeasureAllocations/MeasureMemoryAllocations.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/MeasureAllocations/MeasureMemoryAllocations.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/MeasureAllocations/PrimeTween.Debug.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/MeasureAllocations/PrimeTween.Debug.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/PrimeTween.Demo.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/PrimeTween.Demo.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Road.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Road.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/SlidingDoor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/SlidingDoor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/SqueezeAnimation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/SqueezeAnimation.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/SwipeTutorial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/SwipeTutorial.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/TypewriterAnimatorExample.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/TypewriterAnimatorExample.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Wheels.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Scripts/Wheels.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/CREDITS.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/CREDITS.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Exterior.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Exterior.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Interior.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Interior.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials/Exterior.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials/Exterior.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials/Wheel.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials/Wheel.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials/Window.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials/Window.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials/interior.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials/interior.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/Exterior.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/Exterior.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/Wheel.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/Wheel.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/Window.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/Window.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/interior.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Materials_URP/interior.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Van.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Van.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Wheel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Wheel.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Window.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Cartoon Van by Fero Andezo/Window.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/CREDITS.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/CREDITS.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_ambientOcclusion.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_ambientOcclusion.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_basecolor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_basecolor.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_basecolor.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_basecolor.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_basecolor_URP.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_basecolor_URP.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_height.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_height.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_normal.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_normal.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_roughness.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/Demo/Stylized Sand by Joao Paulo/Stylized_Sand_001_roughness.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/PrimeTweenInstaller.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/PrimeTweenInstaller.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/PrimeTweenInstaller.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/PrimeTweenInstaller.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/internal/PrimeTween.Installer.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/internal/PrimeTween.Installer.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/internal/PrimeTween.Installer.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/internal/PrimeTween.Installer.asmdef.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/internal/PrimeTweenInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/internal/PrimeTweenInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/internal/PrimeTweenInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/internal/PrimeTweenInstaller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/internal/com.kyrylokuzyk.primetween.tgz" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/PrimeTween/internal/com.kyrylokuzyk.primetween.tgz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/Read me.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/Read me.pdf.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchy.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchy.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchy.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchy.asmdef.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchy.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyCache.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyCache.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyCache.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyCache.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyComponentEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyComponentEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyComponentEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyComponentEditor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyComponentWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyComponentWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyComponentWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyComponentWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyDataComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyDataComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyDataComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyDataComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyGUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyGUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyGUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyGUI.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyIconEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyIconEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyIconEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyIconEditor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyLibs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyLibs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyLibs.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyLibs.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyLightingWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyLightingWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyLightingWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyLightingWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyMenuItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyMenuItems.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyMenuItems.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyMenuItems.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyNavbar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyNavbar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyNavbar.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyNavbar.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyPalette.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyPalette.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyPalette.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyPalette.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyPaletteEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyPaletteEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyPaletteEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyPaletteEditor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyPaletteWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyPaletteWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyPaletteWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyPaletteWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchySceneSelectorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchySceneSelectorWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchySceneSelectorWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchySceneSelectorWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/Read me.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/Read me.pdf.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspector.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspector.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspector.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspector.asmdef.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspector.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorAttributes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorAttributes.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorAttributes.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorClipboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorClipboard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorClipboard.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorClipboard.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorComponentHeader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorComponentHeader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorComponentHeader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorComponentHeader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorComponentWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorComponentWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorComponentWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorComponentWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorDrawers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorDrawers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorDrawers.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorDrawers.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorEditor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorLibs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorLibs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorLibs.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorLibs.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorMenu.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorMenu.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorNavbar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorNavbar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorNavbar.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorNavbar.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorResettableVariables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorResettableVariables.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorResettableVariables.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorResettableVariables.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorSelectionHistory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorSelectionHistory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorSelectionHistory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorSelectionHistory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorSerializedDictionary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorSerializedDictionary.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorSerializedDictionary.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorSerializedDictionary.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vInspector/VInspectorState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/game/circle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/game/circle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/game/m_fire.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/game/m_fire.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/game/m_fireParticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/game/m_fireParticle.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/game/m_popParicle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/game/m_popParicle.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/game/m_trail.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/game/m_trail.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/game/t_fireParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/game/t_fireParticle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="d80b3759-fe18-4d3c-b130-00063152f3ea" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -264,22 +10,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "YolarGames"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;YolarGames&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/YolarGames/FallAndFloat.git",
-    "accountId": "434a6ddf-d3bd-420b-a186-bc51983c2e9e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/YolarGames/FallAndFloat.git&quot;,
+    &quot;accountId&quot;: &quot;434a6ddf-d3bd-420b-a186-bc51983c2e9e&quot;
   }
-}]]></component>
+}</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="3ArPMlqi83xfIGduaBbr7liFM5A" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -289,9 +35,17 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -340,6 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773347672638</updated>
       <workItem from="1773347673763" duration="617000" />
+      <workItem from="1773730236187" duration="425000" />
     </task>
     <servers />
   </component>
