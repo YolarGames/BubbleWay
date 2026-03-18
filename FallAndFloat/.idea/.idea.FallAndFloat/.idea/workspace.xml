@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d80b3759-fe18-4d3c-b130-00063152f3ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/NuGet.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Packages.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/packages.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/packages.config.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FallAndFloat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FallAndFloat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/nuget-packages/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/nuget-packages/package.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/nuget-packages/packages.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/nuget-packages/packages.config.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/scene_game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/scene_game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/packages.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +105,8 @@
       <updated>1773347672638</updated>
       <workItem from="1773347673763" duration="617000" />
       <workItem from="1773730236187" duration="669000" />
-      <workItem from="1773781408497" duration="1858000" />
+      <workItem from="1773781408497" duration="1916000" />
+      <workItem from="1773786924455" duration="796000" />
     </task>
     <task id="LOCAL-00001" summary="add: NuGet for Unity">
       <option name="closed" value="true" />
@@ -123,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773730897050</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update: .gitignore&#10;add: packages to Packages folder">
+      <option name="closed" value="true" />
+      <created>1773786163056</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1773786163056</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
@@ -148,7 +149,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="add: NuGet for Unity" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: NuGet for Unity" />
+    <MESSAGE value="update: .gitignore&#10;add: packages to Packages folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: .gitignore&#10;add: packages to Packages folder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
