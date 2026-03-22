@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d80b3759-fe18-4d3c-b130-00063152f3ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/game.ui.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/game.ui.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/game.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/game.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game.ui.csproj.DotSettings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple-layout.wlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FallAndFloat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FallAndFloat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/scene_game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/scene_game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Editor/CanvasCameraBinderEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Editor/CanvasCameraBinderEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/Configs/GameTextureConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/Configs/GameTextureConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/Read me.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/Read me.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/vHierarchy Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/vHierarchy Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/vHierarchy Palette.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/vHierarchy/vHierarchy Palette.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/config_game_textures.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/config_game_textures.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/config_game_textures.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/config_game_textures.asset.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +39,12 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Code/UI/CanvasCameraBinder.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/NuGet.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Packages.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/YolarUtils/game.plugins.asmdef" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/YolarUtils/game.plugins.asmdef.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/vHierarchy/VHierarchyNavbar.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/packages.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/packages.config.meta" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -107,6 +123,8 @@
       <workItem from="1773730236187" duration="669000" />
       <workItem from="1773781408497" duration="1916000" />
       <workItem from="1773786924455" duration="796000" />
+      <workItem from="1774121308327" duration="5646000" />
+      <workItem from="1774211262489" duration="3294000" />
     </task>
     <task id="LOCAL-00001" summary="add: NuGet for Unity">
       <option name="closed" value="true" />

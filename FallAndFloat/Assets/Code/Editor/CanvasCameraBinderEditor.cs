@@ -2,21 +2,22 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(CanvasCameraBinder))]
-public class CanvasCameraBinderEditor : Editor
+namespace Editor
 {
-	private CanvasCameraBinder _canvasCameraBinder;
-
-	private void OnEnable()
+	[CustomEditor(typeof(CanvasCameraBinder))]
+	public class CanvasCameraBinderEditor : UnityEditor.Editor
 	{
-		_canvasCameraBinder = (CanvasCameraBinder)target;
-	}
+		private CanvasCameraBinder _canvasCameraBinder;
 
-	public override void OnInspectorGUI()
-	{
-		base.OnInspectorGUI();
+		private void OnEnable() =>
+			_canvasCameraBinder = (CanvasCameraBinder)target;
 
-		if (!_canvasCameraBinder.TryGetComponent(out Canvas _))
-			EditorGUILayout.HelpBox("Canvas component not found", MessageType.Error);
+		public override void OnInspectorGUI()
+		{
+			base.OnInspectorGUI();
+
+			if (!_canvasCameraBinder.TryGetComponent(out Canvas _))
+				EditorGUILayout.HelpBox("Canvas component not found", MessageType.Error);
+		}
 	}
 }
