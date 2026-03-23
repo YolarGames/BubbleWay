@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: af465214bc340f0428b715f34c0430b1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _spawnAudioProvider: {fileID: 11400000, guid: fff846317ac822049b2fad5deba20b05, type: 2}
+  - _audioSource: {instanceID: 0}
+  - _fireParticles: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

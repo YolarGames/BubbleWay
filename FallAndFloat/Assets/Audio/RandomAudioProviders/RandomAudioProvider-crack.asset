@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195f4d81798a4a7eb442b7be1ac4508a, type: 3}
+  m_Name: RandomAudioProvider-crack
+  m_EditorClassIdentifier: game::Core.Audio.RandomAudioProviderSo
+  _excludeLastPlayed: 1
+  _audioClips:
+  - {fileID: 8300000, guid: 8a3c822e231ddfd40a8a63ca01771b90, type: 3}
+  - {fileID: 8300000, guid: f515e4ef7e777db4d88c54f321ab5049, type: 3}
+  - {fileID: 8300000, guid: 9b7c3063823401a4eabaad5ec5051e46, type: 3}
+  - {fileID: 8300000, guid: a197dd3b85c0c6a4b82e39aa3b98a767, type: 3}

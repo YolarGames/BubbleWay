@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f8235a2f5545628e6aeceaceeed484, type: 3}
+  m_Name: meteor-config
+  m_EditorClassIdentifier: game.feature::Features.Meteors.MeteorConfigSo
+  _meteorPrefabs:
+  - {fileID: 5480554771898540626, guid: 54608759f52832849a2b21d928b5aecf, type: 3}
+  - {fileID: 1019055186635221217, guid: 6bd7241ed33ac3040a48a9dfc593f514, type: 3}
+  - {fileID: 4092499111728971703, guid: 40020987c5a2a4d4196d23cd212d12cc, type: 3}
+  - {fileID: 6989850869373857511, guid: b130fdc2cd3c6ac4db9606a0840e7640, type: 3}

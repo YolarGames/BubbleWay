@@ -1,0 +1,25 @@
+﻿using Core.StaticData;
+using UnityEngine.SceneManagement;
+using UnityEngine.Scripting;
+using YolarUtils.StateMachine;
+
+namespace Core.Infrastructure.StateMachine
+{
+	public class BootstrapState : IEnterState
+	{
+		private readonly IGameStateMachine _stateMachine;
+
+		[Preserve]
+		public BootstrapState(IGameStateMachine stateMachine) =>
+			_stateMachine = stateMachine;
+
+		public void Enter() =>
+			GoToMainMenu();
+
+		private void GoToMainMenu()
+		{
+			if (SceneManager.GetActiveScene().name == Scenes.Bootstrap)
+				_stateMachine.Enter<LoadLevelState, string>(Scenes.MainMenu);
+		}
+	}
+}
