@@ -22,8 +22,6 @@ namespace Infrastructure.vContainer
 		{
 			Instantiate(_inGameDebugConsolePrefab).DontDestroyOnLoad();
 
-			base.Configure(builder);
-
 			SLogger.Message(LogSenders.Application).WithText("Configuring project scope").Log();
 
 			builder.RegisterEntryPoint<GameBootstrapper>();
