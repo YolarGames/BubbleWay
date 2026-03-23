@@ -34,13 +34,6 @@ namespace Infrastructure.vContainer
 			builder.Register<InputHandler>(Lifetime.Singleton).AsImplementedInterfaces();
 		}
 
-		private void RegisterEventSystem(IContainerBuilder builder)
-		{
-			EventSystem eventSystem = Instantiate(_eventSystemPrefab);
-			eventSystem.DontDestroyOnLoad();
-			builder.RegisterComponent(eventSystem);
-		}
-
 		private void RegisterCamera(IContainerBuilder builder)
 		{
 			Camera cam = Instantiate(_cameraPrefab);
