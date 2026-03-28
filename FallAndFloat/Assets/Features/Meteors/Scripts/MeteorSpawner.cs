@@ -83,7 +83,6 @@ namespace Features.Meteors
 
 		private static MeteorType GetMeteorType()
 		{
-			return MeteorType.Icy;
 			Array enumValues = Enum.GetValues(typeof(MeteorType));
 			int randomValue = Random.Range(0, enumValues.Length);
 
