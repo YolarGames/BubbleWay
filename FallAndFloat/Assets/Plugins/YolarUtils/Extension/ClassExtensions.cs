@@ -1,28 +1,24 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace YolarUtils.Extension
 {
 	public static class ClassExtensions
 	{
-		public static bool IsNull(this Object obj)
-		{
-			return !obj;
-		}
+		public static bool IsNull(this Object obj) =>
+			!obj;
 
-		public static bool NotNull(this Object obj)
-		{
-			return obj;
-		}
+		public static bool NotNull(this Object obj) =>
+			obj;
 
-		public static bool IsNull(this object obj)
-		{
-			return obj == null;
-		}
+		public static bool IsNull(this object obj) =>
+			obj == null;
 
-		public static bool NotNull(this object obj)
-		{
-			return obj != null;
-		}
+		public static bool NotNull(this object obj) =>
+			obj != null;
+
+		public static bool IsNullOrEmpty(this ICollection collection) =>
+			collection == null || collection.Count == 0;
 
 		public static Vector3 OffsetX(this Vector3 vector, float x) =>
 			new(vector.x + x, vector.y, vector.z);
