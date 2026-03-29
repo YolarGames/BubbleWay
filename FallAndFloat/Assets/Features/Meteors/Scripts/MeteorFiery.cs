@@ -1,8 +1,9 @@
 ﻿using System.Collections;
+using Core.Audio;
 using Features.Bubbles;
 using PrimeTween;
 using UnityEngine;
-using YolarUtils.Extension;
+using VContainer;
 
 namespace Features.Meteors
 {
@@ -12,6 +13,7 @@ namespace Features.Meteors
 		[SerializeField] private ParticleSystem _fireParticles;
 		[SerializeField] private AudioClip _fireExtinguish;
 		private static readonly WaitForSeconds s_waitForBubbleDisappear = new(0.2f);
+		private IAudioService _audioService;
 
 		protected override void InteractWithBubble(Bubble bubble)
 		{
@@ -35,11 +37,15 @@ namespace Features.Meteors
 		{
 			bubble.transform.SetParent(transform);
 			bubble.SetConsumedMeteorState();
-			_fireExtinguish.Play();
+			_audioService.PlayOneShot(_fireExtinguish);
 
 			yield return s_waitForBubbleDisappear;
 
 			Tween.Scale(bubble.transform, Vector3.zero, 0.5f);
 		}
+
+		[Inject]
+		private void Construct(IAudioService audioService) =>
+			_audioService = audioService;
 	}
 }

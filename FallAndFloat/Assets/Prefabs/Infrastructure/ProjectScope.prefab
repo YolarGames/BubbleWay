@@ -51,6 +51,7 @@ MonoBehaviour:
   _inGameDebugConsolePrefab: {fileID: 132536, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
   _cameraPrefab: {fileID: 663831497057866480, guid: 0573472b57ac8894eb5a1aea7159ce00, type: 3}
   _eventSystemPrefab: {fileID: 5651159685610889315, guid: 5922e4207530bc94bab88b3eb26bd846, type: 3}
-  _meteorConfigSo: {fileID: 11400000, guid: dafd95731978a0346951c821bb2aba70, type: 2}
-  _gameTextureConfigSo: {fileID: 11400000, guid: b2256d947f991f043998b6b93fe675e4, type: 2}
   _loadingScreenPrefab: {fileID: 6997677929597005830, guid: 88f62736e4901a14ca369267396e42c1, type: 3}
+  _meteorConfig: {fileID: 11400000, guid: dafd95731978a0346951c821bb2aba70, type: 2}
+  _gameTextureConfig: {fileID: 11400000, guid: b2256d947f991f043998b6b93fe675e4, type: 2}
+  _audioServiceConfig: {fileID: 11400000, guid: 1f151b328ad6bb540a688795836f1dd0, type: 2}

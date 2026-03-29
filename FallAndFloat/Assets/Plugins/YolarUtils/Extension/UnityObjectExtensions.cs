@@ -15,8 +15,5 @@ namespace YolarUtils.Extension
 
 		public static void DestroyGo(this Component component) =>
 			Object.Destroy(component.gameObject);
-
-		public static void Play(this AudioClip audioClip) =>
-			AudioSource.PlayClipAtPoint(audioClip, Vector3.zero);
 	}
 }

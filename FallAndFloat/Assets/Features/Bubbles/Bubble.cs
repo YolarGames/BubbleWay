@@ -4,6 +4,7 @@ using Core.Infrastructure;
 using Features.StaticData;
 using PrimeTween;
 using UnityEngine;
+using VContainer;
 using YolarUtils.Extension;
 
 namespace Features.Bubbles
@@ -16,6 +17,7 @@ namespace Features.Bubbles
 		[SerializeField] private RandomAudioProviderSo _catchAudioProvider;
 		private CircleCollider2D _collider;
 		private Coroutine _growRoutine;
+		private IAudioService _audioService;
 		private Rigidbody2D _rigidbody;
 		public float Size { get; private set; }
 		public Vector2 LinearVelocity => Vector2.up / transform.localScale.x;
@@ -33,7 +35,7 @@ namespace Features.Bubbles
 		{
 			StopGrowing();
 
-			_popAudioProvider.PlayOneShot();
+			_audioService.PlayOneShot(_popAudioProvider);
 
 			Instantiate(_popParticles, transform.position, Quaternion.identity);
 
@@ -50,7 +52,7 @@ namespace Features.Bubbles
 			if (_growRoutine.IsNull())
 				return;
 
-			_popAudioProvider.PlayOneShot();
+			_audioService.PlayOneShot(_popAudioProvider);
 			StopGrowing();
 			LaunchUp();
 		}
@@ -58,13 +60,17 @@ namespace Features.Bubbles
 		public void SetConsumedMeteorState()
 		{
 			StopGrowing();
-			
+
 			_rigidbody.linearVelocity = Vector3.zero;
 
 			_collider.enabled = false;
-			_catchAudioProvider.PlayOneShot();
+			_audioService.PlayOneShot(_catchAudioProvider);
 			Tween.LocalPosition(transform, Vector2.zero, 0.3f, Ease.OutBounce);
 		}
+
+		[Inject]
+		private void Construct(IAudioService audioService) =>
+			_audioService = audioService;
 
 		private void StopGrowing()
 		{

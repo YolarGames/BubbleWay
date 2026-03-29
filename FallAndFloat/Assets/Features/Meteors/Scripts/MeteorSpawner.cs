@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Core.Audio;
 using Features.StaticData;
 using UnityEngine;
 using VContainer;
@@ -11,12 +12,12 @@ namespace Features.Meteors
 	[SelectionBase]
 	public class MeteorSpawner : MonoBehaviour
 	{
-		[SerializeField] private AudioSource _audioSource;
 		[SerializeField] private AudioClip _spawnClip;
 		[field: SerializeField] public float SpawnRate { get; set; } = 3f;
 		private const float AwayFromBordersGap = 1f;
 		private Camera _camera;
 		private Coroutine _fallRoutine;
+		private IAudioService _audioService;
 		private IMeteorFactory _meteorFactory;
 		private float HalfScreenWidth => _camera.orthographicSize * _camera.aspect;
 		private float RandomPositionX
@@ -55,8 +56,11 @@ namespace Features.Meteors
 			FindObjectsByType<Meteor>(FindObjectsSortMode.None).ForEach(meteor => Destroy(meteor.gameObject));
 
 		[Inject]
-		private void Construct(IMeteorFactory meteorFactory) =>
+		private void Construct(IMeteorFactory meteorFactory, IAudioService audioService)
+		{
 			_meteorFactory = meteorFactory;
+			_audioService = audioService;
+		}
 
 		private IEnumerator FallRoutine()
 		{
@@ -74,12 +78,9 @@ namespace Features.Meteors
 			float meteorSize = ObjectSizes.GetMeteorSize(meteorType);
 			Meteor meteor = _meteorFactory.Create(meteorType, randomPosition);
 
-			PlaySpawnSound();
+			_audioService.PlayOneShot(_spawnClip);
 			meteor.Launch(meteorSize);
 		}
-
-		private void PlaySpawnSound() =>
-			_audioSource.PlayOneShot(_spawnClip);
 
 		private static MeteorType GetMeteorType()
 		{

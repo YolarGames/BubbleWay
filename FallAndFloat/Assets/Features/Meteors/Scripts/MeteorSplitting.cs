@@ -10,6 +10,7 @@ namespace Features.Meteors
 	{
 		[SerializeField] private RandomAudioProviderSo _randomCrackSound;
 		private bool _isSplit;
+		private IAudioService _audioService;
 		private IMeteorFactory _meteorFactory;
 
 		public override void Launch(float size, float horizontalForce = 0)
@@ -27,13 +28,16 @@ namespace Features.Meteors
 		}
 
 		[Inject]
-		private void Construct(IMeteorFactory meteorFactory) =>
+		private void Construct(IMeteorFactory meteorFactory, IAudioService audioService)
+		{
 			_meteorFactory = meteorFactory;
+			_audioService = audioService;
+		}
 
 		private void Split()
 		{
 			GetComponentInChildren<Bubble>()?.Pop();
-			_randomCrackSound.PlayOneShot();
+			_audioService.PlayOneShot(_randomCrackSound);
 			LaunchSplinters();
 			Destroy(gameObject);
 		}

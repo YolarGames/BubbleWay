@@ -4,6 +4,7 @@ using Core.StaticData;
 using Features.Bubbles;
 using Features.StaticData;
 using UnityEngine;
+using VContainer;
 using Random = UnityEngine.Random;
 
 namespace Features.Meteors
@@ -12,7 +13,6 @@ namespace Features.Meteors
 	internal class Meteor : MonoBehaviour
 	{
 		[field: SerializeField] public MeteorType MeteorType { get; private set; }
-		[SerializeField] private RandomAudioProviderSo _spawnAudioProvider;
 		private CircleCollider2D _collider;
 		private Rigidbody2D _rigidbody;
 		public float Size { get; private set; }
