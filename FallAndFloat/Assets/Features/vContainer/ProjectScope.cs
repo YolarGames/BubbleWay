@@ -1,4 +1,5 @@
-﻿using Core.Infrastructure;
+﻿using Core.Audio;
+using Core.Infrastructure;
 using Core.Infrastructure.Configs;
 using Core.Infrastructure.Input;
 using Core.Infrastructure.StateMachine;
@@ -19,9 +20,11 @@ namespace Features.vContainer
 		[SerializeField] private GameObject _inGameDebugConsolePrefab;
 		[SerializeField] private Camera _cameraPrefab;
 		[SerializeField] private EventSystem _eventSystemPrefab;
-		[SerializeField] private MeteorConfigSo _meteorConfigSo;
-		[SerializeField] private GameTextureConfigSo _gameTextureConfigSo;
 		[SerializeField] private LoadingScreen _loadingScreenPrefab;
+		[Header("Configs")
+		 , SerializeField] private MeteorConfigSo _meteorConfig;
+		[SerializeField] private GameTextureConfigSo _gameTextureConfig;
+		[SerializeField] private AudioServiceConfigSo _audioServiceConfig;
 
 		protected override void Configure(IContainerBuilder builder)
 		{
@@ -37,14 +40,16 @@ namespace Features.vContainer
 			builder.Register<ISceneLoader, SceneLoader>(Lifetime.Singleton);
 			builder.Register<IMeteorFactory, MeteorFactory>(Lifetime.Singleton);
 			builder.Register<IInputHandler, ITickable, InputHandler>(Lifetime.Singleton);
+			builder.Register<IAudioService, AudioService>(Lifetime.Singleton);
 			builder.RegisterComponentInNewPrefab(_eventSystemPrefab, Lifetime.Singleton).DontDestroyOnLoad();
 			builder.RegisterComponentInNewPrefab(_loadingScreenPrefab, Lifetime.Singleton).DontDestroyOnLoad();
 		}
 
 		private void RegisterConfigs(IContainerBuilder builder)
 		{
-			builder.RegisterInstance(_meteorConfigSo);
-			builder.RegisterInstance(_gameTextureConfigSo);
+			builder.RegisterInstance(_meteorConfig);
+			builder.RegisterInstance(_gameTextureConfig);
+			builder.RegisterInstance(_audioServiceConfig);
 		}
 
 		private void RegisterCamera(IContainerBuilder builder)

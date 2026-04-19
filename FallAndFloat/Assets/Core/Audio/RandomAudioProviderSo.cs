@@ -11,8 +11,8 @@ namespace Core.Audio
 		[SerializeField] private AudioClip[] _audioClips;
 		private AudioClip _lastPlayedClip;
 
-		public void PlayOneShot() =>
-			AudioSource.PlayClipAtPoint(Get(), Vector3.zero);
+		public static implicit operator AudioClip(RandomAudioProviderSo providerSo) =>
+			providerSo.Get();
 
 		private AudioClip Get()
 		{

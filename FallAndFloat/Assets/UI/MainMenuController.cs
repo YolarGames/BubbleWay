@@ -16,6 +16,7 @@ namespace UI
 		[SerializeField] private Button _exitButton;
 		[SerializeField] private RandomAudioProviderSo _popAudioProvider;
 		[SerializeField] private ParticleSystem _popParticles;
+		private IAudioService _audioService;
 		private ISceneLoader _sceneLoader;
 
 		private void OnEnable()
@@ -31,8 +32,11 @@ namespace UI
 		}
 
 		[Inject]
-		private void Construct(ISceneLoader sceneLoader) =>
+		private void Construct(ISceneLoader sceneLoader, IAudioService audioService)
+		{
 			_sceneLoader = sceneLoader;
+			_audioService = audioService;
+		}
 
 		private void Play()
 		{
@@ -50,7 +54,7 @@ namespace UI
 
 		private void PlayFx(Vector3 position)
 		{
-			_popAudioProvider.PlayOneShot();
+			_audioService.PlayOneShot(_popAudioProvider);
 
 			if (_popParticles.IsNull())
 				return;

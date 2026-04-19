@@ -10,6 +10,7 @@ namespace Core.Infrastructure
 		public static event Action OnDamage = delegate { };
 		public static event Action OnBubblePop = delegate { };
 		public static event Action OnGameOver = delegate { };
+		public static event Action OnButtonClick = delegate { };
 		public static event Action<Vector3> OnBubbleStartBlow = delegate { };
 
 		public static void InvokeOnBubbleBlow(Vector3 screenToWorldPoint) =>
@@ -29,5 +30,10 @@ namespace Core.Infrastructure
 
 		public static void InvokeOnGameOver() =>
 			OnGameOver();
+
+		private static void InvokeOnButtonClick()
+		{
+			OnButtonClick.Invoke();
+		}
 	}
 }

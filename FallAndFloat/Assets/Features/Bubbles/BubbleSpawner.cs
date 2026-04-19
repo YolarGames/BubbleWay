@@ -2,6 +2,7 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using VContainer;
+using VContainer.Unity;
 using YolarUtils.Extension;
 
 namespace Features.Bubbles
@@ -13,6 +14,7 @@ namespace Features.Bubbles
 		private const float SpawnHeight = 1.5f;
 		private Bubble _spawnedBubble;
 		private Camera _camera;
+		private IObjectResolver _objectResolver;
 
 		private void OnEnable()
 		{
@@ -47,9 +49,10 @@ namespace Features.Bubbles
 				.ForEach(bubble => bubble.Pop());
 
 		[Inject]
-		private void Construct(Camera cam)
+		private void Construct(Camera cam, IObjectResolver objectResolver)
 		{
 			_camera = cam;
+			_objectResolver = objectResolver;
 		}
 
 		private void ReleaseBubble()
@@ -69,7 +72,7 @@ namespace Features.Bubbles
 			Vector3 spawnPosition = GetSpawnPosition(inputPosition);
 
 			_mage.CastAt(spawnPosition);
-			_spawnedBubble = Instantiate(_bubblePrefab, spawnPosition, Quaternion.identity, transform);
+			_spawnedBubble = _objectResolver.Instantiate(_bubblePrefab, spawnPosition, Quaternion.identity, transform);
 			_spawnedBubble.StartGrow();
 		}
 
