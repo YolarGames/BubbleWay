@@ -4,7 +4,7 @@ namespace Features.Weather
 {
 	internal abstract class Weather : MonoBehaviour
 	{
-		private void Awake() =>
+		private void Start() =>
 			Apply();
 
 		private void OnDestroy() =>

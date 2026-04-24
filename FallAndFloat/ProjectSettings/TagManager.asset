@@ -52,5 +52,8 @@ TagManager:
   - name: Player
     uniqueID: 1224607603
     locked: 0
+  - name: Weather
+    uniqueID: 2708162653
+    locked: 0
   m_RenderingLayers:
   - Default
