@@ -30,9 +30,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2285967119514960515}
   - {fileID: 6650400646857497059}
   - {fileID: 8486384497393647053}
+  - {fileID: 2285967119514960515}
   - {fileID: 6631295328950466419}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63,6 +63,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6650400646857497059}
   - component: {fileID: 2918206777253992238}
+  - component: {fileID: 8489356064661696245}
   m_Layer: 0
   m_Name: t-cloud-1
   m_TagString: Untagged
@@ -144,6 +145,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &8489356064661696245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4753584391126722428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99fec9f6dc30aaa46b72a1ed1aaea5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: game::Core.SpriteBehaviours.SpriteElement
+  _spriteId: 15
 --- !u!1 &5214276261400214347
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8486384497393647053}
   - component: {fileID: 8957830065060478617}
+  - component: {fileID: 3201238976649482929}
   m_Layer: 0
   m_Name: t-cloud-2
   m_TagString: Untagged
@@ -235,6 +250,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &3201238976649482929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5214276261400214347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99fec9f6dc30aaa46b72a1ed1aaea5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: game::Core.SpriteBehaviours.SpriteElement
+  _spriteId: 16
 --- !u!1 &8056237295822479721
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,6 +273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2285967119514960515}
   - component: {fileID: 5597630070687788497}
+  - component: {fileID: 4737075973183058321}
   m_Layer: 0
   m_Name: t-cloud-3
   m_TagString: Untagged
@@ -326,6 +355,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &4737075973183058321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8056237295822479721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99fec9f6dc30aaa46b72a1ed1aaea5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: game::SpriteElement
+  _spriteId: 17
 --- !u!1001 &6018128987435430911
 PrefabInstance:
   m_ObjectHideFlags: 0

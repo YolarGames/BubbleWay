@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using YolarUtils.Extension;
 
 namespace Features.Meteors
 {
@@ -12,8 +11,7 @@ namespace Features.Meteors
 
 		public Meteor GetPrefabFromMeteorType(MeteorType meteorType)
 		{
-			if (_map.IsNullOrEmpty())
-				_map = InitMapFromConfig(_meteorPrefabs);
+			_map ??= InitMapFromConfig(_meteorPrefabs);
 
 			return _map[meteorType];
 		}

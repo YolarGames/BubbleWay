@@ -4,6 +4,7 @@ using Core.Infrastructure.Configs;
 using Core.Infrastructure.Input;
 using Core.Infrastructure.StateMachine;
 using Features.Meteors;
+using Features.SpriteBehaviours;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using VContainer;
@@ -25,6 +26,7 @@ namespace Features.vContainer
 		 , SerializeField] private MeteorConfigSo _meteorConfig;
 		[SerializeField] private GameTextureConfigSo _gameTextureConfig;
 		[SerializeField] private AudioServiceConfigSo _audioServiceConfig;
+		[SerializeField] private GameSpritesConfigSo _gameSpritesConfig;
 
 		protected override void Configure(IContainerBuilder builder)
 		{
@@ -50,6 +52,7 @@ namespace Features.vContainer
 			builder.RegisterInstance(_meteorConfig);
 			builder.RegisterInstance(_gameTextureConfig);
 			builder.RegisterInstance(_audioServiceConfig);
+			builder.RegisterInstance(_gameSpritesConfig);
 		}
 
 		private void RegisterCamera(IContainerBuilder builder)

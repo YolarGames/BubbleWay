@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4677498481463045389}
   - component: {fileID: 7765952884369524483}
+  - component: {fileID: 4046023946998467798}
   m_Layer: 0
   m_Name: view
   m_TagString: Untagged
@@ -34,6 +35,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7765952884369524483
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -52,6 +54,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -73,9 +77,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1224607603
   m_SortingLayer: 3
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 1504614023814576371, guid: 95873b33cd51593499d2d8e654e945e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -85,8 +91,20 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4046023946998467798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4882245818356216218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99fec9f6dc30aaa46b72a1ed1aaea5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: game::Core.SpriteBehaviours.SpriteElement
+  _spriteId: 10
 --- !u!1 &7161505343726636759
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,7 +116,7 @@ GameObject:
   - component: {fileID: 261025758573485146}
   - component: {fileID: 1572069599542476131}
   m_Layer: 0
-  m_Name: p_mage
+  m_Name: p-wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

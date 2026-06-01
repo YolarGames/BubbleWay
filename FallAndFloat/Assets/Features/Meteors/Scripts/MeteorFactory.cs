@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using VContainer;
+using VContainer.Unity;
 using YolarUtils.Extension;
 using Object = UnityEngine.Object;
 
@@ -24,8 +25,8 @@ namespace Features.Meteors
 			Meteor prefab = _config.GetPrefabFromMeteorType(type);
 			Meteor instance = Object.Instantiate(prefab, position, Quaternion.identity, _meteorParent.Value);
 
-			_resolver.Inject(instance);
-			
+			_resolver.InjectGameObject(instance.gameObject);
+
 			return instance;
 		}
 

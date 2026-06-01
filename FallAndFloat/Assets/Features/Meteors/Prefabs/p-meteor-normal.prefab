@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3257391038809801935}
   - component: {fileID: 3324831031731631134}
+  - component: {fileID: 246227949622475833}
   m_Layer: 0
   m_Name: t_meteor
   m_TagString: Untagged
@@ -91,6 +92,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &246227949622475833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28027622934923359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99fec9f6dc30aaa46b72a1ed1aaea5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: game::Core.SpriteBehaviours.SpriteElement
+  _spritesConfig: {fileID: 11400000, guid: 6ee523a8f7bc94b43865492ad72e371f, type: 2}
+  _spriteId: 1
 --- !u!1 &486722925438605892
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MeteorType>k__BackingField: 0
-  _spawnAudioProvider: {fileID: 11400000, guid: fff846317ac822049b2fad5deba20b05, type: 2}
 --- !u!58 &8138438257190154503
 CircleCollider2D:
   m_ObjectHideFlags: 0

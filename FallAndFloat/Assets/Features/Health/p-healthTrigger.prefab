@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 628997247449937831}
   - component: {fileID: 6944879634089957501}
   m_Layer: 0
-  m_Name: p_healthTrigger
+  m_Name: p-healthTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

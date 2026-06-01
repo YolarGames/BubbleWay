@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bubblePrefab: {fileID: 4416894141620264738, guid: d157bef30192087458379a786e9dbad6, type: 3}
-  _mage: {fileID: 4355550824631158530}
+  _wizard: {fileID: 4355550824631158530}
 --- !u!1001 &3000271039673907809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58,6 +58,10 @@ PrefabInstance:
     - target: {fileID: 261025758573485146, guid: 24a2fea5cf1b7aa489a193a2f4af6011, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 261025758573485146, guid: 24a2fea5cf1b7aa489a193a2f4af6011, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 261025758573485146, guid: 24a2fea5cf1b7aa489a193a2f4af6011, type: 3}
       propertyPath: m_LocalPosition.z
@@ -93,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7161505343726636759, guid: 24a2fea5cf1b7aa489a193a2f4af6011, type: 3}
       propertyPath: m_Name
-      value: p_mage
+      value: p_wizard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

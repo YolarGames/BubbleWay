@@ -55,3 +55,4 @@ MonoBehaviour:
   _meteorConfig: {fileID: 11400000, guid: dafd95731978a0346951c821bb2aba70, type: 2}
   _gameTextureConfig: {fileID: 11400000, guid: b2256d947f991f043998b6b93fe675e4, type: 2}
   _audioServiceConfig: {fileID: 11400000, guid: 1f151b328ad6bb540a688795836f1dd0, type: 2}
+  _gameSpritesConfig: {fileID: 11400000, guid: 6ee523a8f7bc94b43865492ad72e371f, type: 2}

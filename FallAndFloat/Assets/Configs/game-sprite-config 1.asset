@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8815895bbbc7d904cb1b62113666773f, type: 3}
+  m_Name: game-sprite-config 1
+  m_EditorClassIdentifier: game::Core.SpriteBehaviours.GameSpriteData
+  _sprites:
+  - SpriteId: 0
+    Sprite: {fileID: 3402546580307724193, guid: 7fd74fc65ea90b14cbe017d28ec12f24, type: 3}
+  - SpriteId: 1
+    Sprite: {fileID: -3325978544548684641, guid: 8ffe4d062282757418e9885fad661ed7, type: 3}
+  - SpriteId: 2
+    Sprite: {fileID: 1504614023814576371, guid: 95873b33cd51593499d2d8e654e945e1, type: 3}
+  - SpriteId: 3
+    Sprite: {fileID: 21300000, guid: 53c23ee212ac91f4dae9ee01d985b454, type: 3}
+  - SpriteId: 5
+    Sprite: {fileID: 21300000, guid: 55e3e944945900a4f84314074ec0f842, type: 3}
+  - SpriteId: 6
+    Sprite: {fileID: 21300000, guid: a08fee2145a83cc4ab66d39f3178058a, type: 3}
+  - SpriteId: 7
+    Sprite: {fileID: 21300000, guid: a3139d18eb08ef349bfe3bffe34ddd8c, type: 3}
+  - SpriteId: 8
+    Sprite: {fileID: 21300000, guid: c57f587ce55ef1344a9b127b803ab33f, type: 3}
+  - SpriteId: 9
+    Sprite: {fileID: 21300000, guid: 3ebe32acd670a9d46aeaaf9e041e823d, type: 3}
+  - SpriteId: 10
+    Sprite: {fileID: -191419783571933970, guid: a392b77f5c985704984fc421b427119c, type: 3}
+  - SpriteId: 11
+    Sprite: {fileID: 7733374793684950778, guid: b3fd7d48eb0654542aafe22d9ad51694, type: 3}
+  - SpriteId: 12
+    Sprite: {fileID: 8374739308806101461, guid: 5326c07332572184c8c26e48cd090e89, type: 3}
+  - SpriteId: 13
+    Sprite: {fileID: -9097760217308598434, guid: 055e48582bdf1c3439d763a779bea0de, type: 3}
+  - SpriteId: 14
+    Sprite: {fileID: -4575022206215740470, guid: 3ab306852d510a54e8479845993e6d72, type: 3}
+  - SpriteId: 15
+    Sprite: {fileID: 21300000, guid: 4e81709496f0a0648a71096bc8eef8a1, type: 3}
+  - SpriteId: 16
+    Sprite: {fileID: 21300000, guid: 26978d444017d5a4bb733be715093b72, type: 3}
+  - SpriteId: 17
+    Sprite: {fileID: 21300000, guid: eec1cc74207aae64cbbf3327627b1504, type: 3}

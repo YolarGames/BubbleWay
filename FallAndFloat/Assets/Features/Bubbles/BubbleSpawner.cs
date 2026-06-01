@@ -10,7 +10,7 @@ namespace Features.Bubbles
 	internal class BubbleSpawner : MonoBehaviour
 	{
 		[SerializeField] private Bubble _bubblePrefab;
-		[SerializeField] private Mage.Mage _mage;
+		[SerializeField] private Wizard.Wizard _wizard;
 		private const float SpawnHeight = 1.5f;
 		private Bubble _spawnedBubble;
 		private Camera _camera;
@@ -71,7 +71,7 @@ namespace Features.Bubbles
 
 			Vector3 spawnPosition = GetSpawnPosition(inputPosition);
 
-			_mage.CastAt(spawnPosition);
+			_wizard.CastAt(spawnPosition);
 			_spawnedBubble = _objectResolver.Instantiate(_bubblePrefab, spawnPosition, Quaternion.identity, transform);
 			_spawnedBubble.StartGrow();
 		}

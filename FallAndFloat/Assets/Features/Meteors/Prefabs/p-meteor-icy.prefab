@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8233430233924713601}
   - component: {fileID: 7083811843809647837}
+  - component: {fileID: 4511689685957589334}
   m_Layer: 0
   m_Name: t-meteor-ice-4
   m_TagString: Untagged
@@ -91,6 +92,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &4511689685957589334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528384170137305801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99fec9f6dc30aaa46b72a1ed1aaea5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: game::Core.SpriteBehaviours.SpriteElement
+  _spriteId: 8
 --- !u!1 &1566315889818264955
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5731483417250551104}
   - component: {fileID: 5867805228978538415}
+  - component: {fileID: 7070481313174951486}
   m_Layer: 0
   m_Name: t-meteor-ice-2
   m_TagString: Untagged
@@ -182,6 +197,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &7070481313174951486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566315889818264955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99fec9f6dc30aaa46b72a1ed1aaea5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: game::Core.SpriteBehaviours.SpriteElement
+  _spriteId: 6
 --- !u!1 &4905224960201815517
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4823612480702108016}
   - component: {fileID: 1629789534395778464}
+  - component: {fileID: 3395481542929199453}
   m_Layer: 0
   m_Name: t-meteor-ice-3
   m_TagString: Untagged
@@ -309,6 +338,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &3395481542929199453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5902868730382390397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99fec9f6dc30aaa46b72a1ed1aaea5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: game::Core.SpriteBehaviours.SpriteElement
+  _spriteId: 7
 --- !u!1 &8370217820400091658
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2842643350612079182}
   - component: {fileID: 3721891300756718535}
+  - component: {fileID: 4242516568839090024}
   m_Layer: 0
   m_Name: t-meteor-ice-1
   m_TagString: Untagged
@@ -400,6 +443,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &4242516568839090024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370217820400091658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99fec9f6dc30aaa46b72a1ed1aaea5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: game::Core.SpriteBehaviours.SpriteElement
+  _spriteId: 5
 --- !u!1 &8609352154011161969
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7116926136370664044}
   - component: {fileID: 633077826649737048}
+  - component: {fileID: 6512539598210025482}
   m_Layer: 0
   m_Name: t-meteor-ice-5
   m_TagString: Untagged
@@ -491,6 +548,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &6512539598210025482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609352154011161969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99fec9f6dc30aaa46b72a1ed1aaea5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: game::Core.SpriteBehaviours.SpriteElement
+  _spriteId: 9
 --- !u!1001 &7284745671518780756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -601,7 +671,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: game.feature::Features.Meteors.MeteorIcy
   <MeteorType>k__BackingField: 3
-  _spawnAudioProvider: {fileID: 11400000, guid: fff846317ac822049b2fad5deba20b05, type: 2}
   _iceFragments:
   - {fileID: 8370217820400091658}
   - {fileID: 1566315889818264955}
